@@ -12,7 +12,7 @@ Analyse the Magnetometer data captured with Voyager 2 of Neptune.
 
 
 ## Data
-The data is from NASA's Voyager mission.
+The data is from NASA's Voyager 2 mission.
 
 The data can be downloaded from here (we use version 1.0)
 https://pds-ppi.igpp.ucla.edu/search/view/?id=pds://PPI/VG2-N-MAG-4-RDR-HGCOORDS-1.92SEC-V1.0
