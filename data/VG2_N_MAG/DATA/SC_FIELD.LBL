@@ -1,0 +1,192 @@
+PDS_VERSION_ID                = PDS3                                          
+PRODUCT_ID                    = "SC_FIELD"                                    
+DATA_SET_ID                   = {"VG2-N-MAG-4-RDR-HGCOORDS-1.92SEC-V1.0",     
+                                 "VG2-N-MAG-4-RDR-HGCOORDS-9.6SEC-V1.0",      
+                                 "VG2-N-MAG-4-SUMM-HGCOORDS-48SEC-V1.0"}      
+PRODUCT_TYPE                  = "ANCILLARY"                                   
+PRODUCT_CREATION_TIME         = 1993-11-01                                    
+                                                                              
+RECORD_TYPE                   = FIXED_LENGTH                                  
+RECORD_BYTES                  = 80                                            
+FILE_RECORDS                  = 2601                                          
+                                                                              
+START_TIME                    = 1989-08-22T00:00:47.663                       
+STOP_TIME                     = 1989-08-25T01:59:11.319                       
+SPACECRAFT_CLOCK_START_COUNT  = "UNK"                                         
+SPACECRAFT_CLOCK_STOP_COUNT   = "UNK"                                         
+                                                                              
+SPACECRAFT_NAME               = "VOYAGER 2"                                   
+INSTRUMENT_NAME               = "TRIAXIAL FLUXGATE MAGNETOMETER"              
+MISSION_PHASE_NAME            = "NEPTUNE ENCOUNTER"                           
+TARGET_NAME                   = "NEPTUNE"                                     
+                                                                              
+^TABLE                        = "SC_FIELD.DAT"                                
+OBJECT                        = TABLE                                         
+  INTERCHANGE_FORMAT          = BINARY                                        
+  ROWS                        = 2601                                          
+  COLUMNS                     = 14                                            
+  ROW_BYTES                   = 80                                            
+                                                                              
+  OBJECT                      = COLUMN                                        
+    NAME                      = "CTIME"                                       
+    COLUMN_NUMBER             = 1                                             
+    UNIT                      = "SECONDS"                                     
+    DATA_TYPE                 = "FLOAT"                                       
+    START_BYTE                = 1                                             
+    BYTES                     = 8                                             
+    MISSING_CONSTANT          = 1.7e308                                       
+    DESCRIPTION               = "                                             
+        Time column.  This field contains time in seconds                     
+        elapsed since Jan 1, 1966 00:00:00.000Z without                       
+        accounting for leap seconds."                                         
+  END_OBJECT                  = COLUMN                                        
+                                                                              
+  OBJECT                      = COLUMN                                        
+    NAME                      = "PDSTIME"                                     
+    COLUMN_NUMBER             = 2                                             
+    UNIT                      = "NONE"                                        
+    DATA_TYPE                 = TIME                                          
+    START_BYTE                = 9                                             
+    BYTES                     = 24                                            
+    DESCRIPTION               = "                                             
+        Date/Time string of the form                                          
+        yyyy-mm-ddThh:mm:ss.sss such that the                                 
+        representation of the date and time for                               
+        Jan 01, 2000 00:00:00.000 would be:                                   
+        2000-01-01T00:00:00.000Z where Z indicates                            
+        Universal Time (also known as Zulu time)."                            
+  END_OBJECT                  = COLUMN                                        
+                                                                              
+  OBJECT                      = COLUMN                                        
+    NAME                      = "M65536"                                      
+    COLUMN_NUMBER             = 3                                             
+    UNIT                      = "TICKS"                                       
+    DATA_TYPE                 = MSB_INTEGER                                   
+    START_BYTE                = 33                                            
+    BYTES                     = 4                                             
+    MISSING_CONSTANT          = 2147483000                                    
+    DESCRIPTION               = "S/C CLOCK MOD 65536"                         
+  END_OBJECT                  = COLUMN                                        
+                                                                              
+  OBJECT                      = COLUMN                                        
+    NAME                      = "MOD60"                                       
+    COLUMN_NUMBER             = 4                                             
+    UNIT                      = "TICKS"                                       
+    DATA_TYPE                 = MSB_INTEGER                                   
+    START_BYTE                = 37                                            
+    BYTES                     = 4                                             
+    MISSING_CONSTANT          = 2147483000                                    
+    DESCRIPTION               = "S/C CLOCK MOD 60"                            
+  END_OBJECT                  = COLUMN                                        
+                                                                              
+  OBJECT                      = COLUMN                                        
+    NAME                      = "FDS_LINE"                                    
+    COLUMN_NUMBER             = 5                                             
+    UNIT                      = "NONE"                                        
+    DATA_TYPE                 = MSB_INTEGER                                   
+    START_BYTE                = 41                                            
+    BYTES                     = 4                                             
+    MISSING_CONSTANT          = 2147483000                                    
+    DESCRIPTION               = "FDS_LINE"                                    
+  END_OBJECT                  = COLUMN                                        
+                                                                              
+  OBJECT                      = COLUMN                                        
+    NAME                      = "MAG_ID"                                      
+    COLUMN_NUMBER             = 6                                             
+    UNIT                      = "NONE"                                        
+    DATA_TYPE                 = MSB_INTEGER                                   
+    START_BYTE                = 45                                            
+    BYTES                     = 4                                             
+    MISSING_CONSTANT          = 2147483000                                    
+    DESCRIPTION               = "MAGNETOMETER ID"                             
+  END_OBJECT                  = COLUMN                                        
+                                                                              
+  OBJECT                      = COLUMN                                        
+    NAME                      = "BX"                                          
+    COLUMN_NUMBER             = 7                                             
+    UNIT                      = "NANOTESLA"                                   
+    DATA_TYPE                 = IEEE_REAL                                     
+    START_BYTE                = 49                                            
+    BYTES                     = 4                                             
+    MISSING_CONSTANT          = 3.4e38                                        
+    DESCRIPTION               = "S/C MAG COMPONENT"                           
+  END_OBJECT                  = COLUMN                                        
+                                                                              
+  OBJECT                      = COLUMN                                        
+    NAME                      = "BY"                                          
+    COLUMN_NUMBER             = 8                                             
+    UNIT                      = "NANOTESLA"                                   
+    DATA_TYPE                 = IEEE_REAL                                     
+    START_BYTE                = 53                                            
+    BYTES                     = 4                                             
+    MISSING_CONSTANT          = 3.4e38                                        
+    DESCRIPTION               = "S/C MAG COMPONENT"                           
+  END_OBJECT                  = COLUMN                                        
+                                                                              
+  OBJECT                      = COLUMN                                        
+    NAME                      = "BZ"                                          
+    COLUMN_NUMBER             = 9                                             
+    UNIT                      = "NANOTESLA"                                   
+    DATA_TYPE                 = IEEE_REAL                                     
+    START_BYTE                = 57                                            
+    BYTES                     = 4                                             
+    MISSING_CONSTANT          = 3.4e38                                        
+    DESCRIPTION               = "S/C MAG COMPONENT"                           
+  END_OBJECT                  = COLUMN                                        
+                                                                              
+  OBJECT                      = COLUMN                                        
+    NAME                      = "BMAG"                                        
+    COLUMN_NUMBER             = 10                                            
+    UNIT                      = "NANOTESLA"                                   
+    DATA_TYPE                 = IEEE_REAL                                     
+    START_BYTE                = 61                                            
+    BYTES                     = 4                                             
+    MISSING_CONSTANT          = 3.4e38                                        
+    DESCRIPTION               = "TOTAL MAG"                                   
+  END_OBJECT                  = COLUMN                                        
+                                                                              
+  OBJECT                      = COLUMN                                        
+    NAME                      = "RMS_BX"                                      
+    COLUMN_NUMBER             = 11                                            
+    UNIT                      = "NANOTESLA"                                   
+    DATA_TYPE                 = IEEE_REAL                                     
+    START_BYTE                = 65                                            
+    BYTES                     = 4                                             
+    MISSING_CONSTANT          = 3.4e38                                        
+    DESCRIPTION               = "RMS MAG COMPONENT"                           
+  END_OBJECT                  = COLUMN                                        
+                                                                              
+  OBJECT                      = COLUMN                                        
+    NAME                      = "RMS_BY"                                      
+    COLUMN_NUMBER             = 12                                            
+    UNIT                      = "NANOTESLA"                                   
+    DATA_TYPE                 = IEEE_REAL                                     
+    START_BYTE                = 69                                            
+    BYTES                     = 4                                             
+    MISSING_CONSTANT          = 3.4e38                                        
+    DESCRIPTION               = "RMS MAG COMPONENT"                           
+  END_OBJECT                  = COLUMN                                        
+                                                                              
+  OBJECT                      = COLUMN                                        
+    NAME                      = "RMS_BZ"                                      
+    COLUMN_NUMBER             = 13                                            
+    UNIT                      = "NANOTESLA"                                   
+    DATA_TYPE                 = IEEE_REAL                                     
+    START_BYTE                = 73                                            
+    BYTES                     = 4                                             
+    MISSING_CONSTANT          = 3.4e38                                        
+    DESCRIPTION               = "RMS MAG COMPONENT"                           
+  END_OBJECT                  = COLUMN                                        
+                                                                              
+  OBJECT                      = COLUMN                                        
+    NAME                      = "NPTS"                                        
+    COLUMN_NUMBER             = 14                                            
+    UNIT                      = "NONE"                                        
+    DATA_TYPE                 = MSB_INTEGER                                   
+    START_BYTE                = 77                                            
+    BYTES                     = 4                                             
+    MISSING_CONSTANT          = 2147483000                                    
+    DESCRIPTION               = "NUM PTS IN AVG"                              
+  END_OBJECT                  = COLUMN                                        
+END_OBJECT                    = TABLE                                         
+END                                                                           

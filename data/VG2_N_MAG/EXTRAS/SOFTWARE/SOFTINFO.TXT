@@ -1,0 +1,592 @@
+*****************************************************************************
+*                         LEGAL NOTICE                                      *
+*****************************************************************************
+This software, documentation and associated material was developed by various
+people in the Institute of Geophysics and Planetary Physics (IGPP) at the
+University of California, Los Angeles (UCLA). Some or all portions of the
+software, documentation and associated material is copyrighted by the the 
+Regents of the University of California. All afore mentioned parties
+are referred herein as the "authors".
+
+Permission to use, copy, modify and distribute without charge this
+software, documentation, etc. is granted, provided that this comment is
+retained, and that all copyright notices and the names of the authors
+remains intact, and that the names of the authors not be used in
+advertising or publicity pertaining to distribution of the software
+without specific, written prior permission.  The author makes no
+representations about the suitability of this software for any
+purpose.  It is provided "as is" without express or implied warranty.
+
+The authors disclaim all warranties with regard to this software, including
+all implied warranties of merchantability and fitness, in no event shall
+the authors be liable for any special, indirect or consequential damages or
+any damages whatsoever resulting from loss of use, data or profits,
+whether in an action of contract, negligence or other tortuous action,
+arising out of or in connection with the use or performance of this
+software.
+******************************************************************************
+This particular CDROM does not contain any software. In order to distribute
+our software on CD, we will need to make all of our code, (source,
+object, and executable) ISO-9660, level 1 compliant. This will take some
+additional effort on our part. Software is available to access data,
+catalog information, and labels on this disk form the PPI Node of the
+PDS. In order to obtain software from the Node, access the ftp-anonymous
+account on pdsppi.ucla.igpp.edu (128.97.68.54). The software is located in
+the pdsppi-soft-dist directory.
+
+This distribution of software does not contain documents. They were not 
+ready at the time this disk was prepared. The source code is provided in lieu of
+documents. The comments in the source code are typically rather detailed and 
+should help. 
+
+The basic structure of the distribution is:
+
+   +- bin	(executable versions of applications)
+   |
+   +- include	(all include files)
+   |
+   +- lib	(compiled object libraries)
+   |
+   +- man	(manual pages - if there were any)
+   |
+   +- src	(source code for everything)
+       |
+       +- app	(source code for applications)
+       |   |
+       |   +- ditdos		(The ditdos client)
+       |   |
+       |   +- ditdos_server	(The ditdos server)
+       |   |
+       |   +- scripts		( Various scripts)
+       |
+       +- lib	(source code for libraries)
+	   |
+	   +- bc	(Binary conversion functions)
+	   |
+	   +- dfs	(Data Flow System functions)
+	   |
+	   +- ditdos	(ditdos client/server functions)
+	   |
+	   +- ffio	(IGPP Flatfile I/O library)
+	   |
+	   +- fnc	(File Name Conversion library)
+	   |
+	   +- igpp_sql	(The IGPP SQL parser library)
+	   |
+	   +- list	(Object oriented list manager functions)
+	   |
+	   +- message	(Generic message reporting functions)
+	   |
+	   +- packet	(tagged packet library)
+	   |
+	   +- parserc	(string parsing functions)
+
+
+Here is a list of the various software products provided in this 
+distribution.
+
+** Special Note **
+The binary data conversion library and the file name conversion libraries
+are beta releases and are currently being tested.
+
+Libraries:
+
+   File Name Conversion Library: For converting to and from file paths in
+			    a variety of operating system environments.
+			    Included are POSIX, VMS, MS-DOS, MAC-OS.
+
+   Binary Data Conversion Library : For converting between various machine
+				    representation of binary numbers and IEEE
+				    format.
+   Data Flow System Library : For passing data in the UCLA/IGPP flatfile
+			      format using the packet library.
+   DITDOS Library : For creating distributed information tracking and
+		    data ordering system applications.
+   Flatfile I/O Library : For creating, deleting, managing and using UCLA/IGPP 
+			  flatfiles.
+   IGPP SQL Parser Library : Parses a textual SQL query into a data structure
+	for use by applications which need to provide SQL query support.
+	The parser does have some IGPP specific additions such as fuzzy
+	query support. The parser does not support sub-queries.
+   List Management Library : Provides a simple method for managing
+	 collects of data.
+   Message Management Library : Provides a formal way to define 
+	 collections of messages an application may print to the
+	 screen. Messages may contain any number of variables.
+   Packet Library : For establishing connections to between applications
+		    and passing tagged packets of information.
+   Parser Library : Contains functions for parsing  and manipulating strings
+
+Applications:
+
+   ditdos : The DITDOS administrators application. Provides a command
+	    shell for creating, deleting and managing DITDOS data brokers.
+   ditdos_server : A server which provides SQL access to registered datasets.
+   ffinventory : Creates DITDOS commands for populating the inventory
+		 tables with information about all flatfiles at or below a 
+		 given path. Reference names are the same as the flatfile name.
+		 Commands generated by this application can be read b 'ditdos'.
+   pdsinventory : Creates DITDOS commands for populating the inventory
+		 tables with information about all flatfiles at or below a 
+		 given path. Reference names are modified PDS datasets IDs.
+		 Commands generated by this application can be read b 'ditdos'.
+
+Here is a detailed catalog of the software libraries.
+
+----------------------------------------------------------------------------
+File Name Conversion Library : For converting file names for use between i
+			       operating system environments.
+----------------------------------------------------------------------------
+
+   FNCPathType : Determines the originating operating system environment by
+		 inspection of the file name path.
+   FNCMakeFileReference : Create an instance of an FNC file reference 
+			  structure.
+   FNCMakePathNode : Create an instance of an FNC path node structure.
+   FNCPushPathNode : Adds a path node structure to a path link list.
+   FNCDumpPath: Prints a human readable description of a path link list.
+   FNCSetFile : Set the file portion of an internal format file reference.
+   FNCSetDevice : Set the device portion of an internal format file reference.
+   FNCParseFileReference : Parses a fully qualified file reference into its
+			   components (i.e., file name and path). The format
+			   the file reference is in must be specified. Output
+			   from FNCPathType may be used.
+   FNCParsePOSIXFileReference : Parses a fully qualified POSIX file reference
+				into its components (i.e., file name and path).
+   FNCParseMSDOSFileReference : Parses a fully qualified MSDOS file reference
+				into its components (i.e., file name and path).
+   FNCParseVMSFileReference : Parses a fully qualified VMS file reference
+			      into its components (i.e., file name and path).
+   FNCParseMACOSFileReference : Parses a fully qualified MACOS file reference
+				into its components (i.e., file name and path).
+   FNCParseFilePath : Parses a file path into an internal format.
+   FNCParsePOSIXFilePath: Parses a POSIX file path into an internal format.
+   FNCParseMSDOSFilePath: Parses a MSDOS file path into an internal format.
+   FNCParseMACOSFilePath: Parses a MACOS file path into an internal format.
+   FNCParseVMSFilePath: Parses a VMS file path into an internal format.
+   FNCFileReferenceToPOSIX : Generates a POSIX compliant file reference
+			     from an internal format file reference structure.
+   FNCFileReferenceToMSDOS : Generates a MSDOS compliant file reference
+			     from an internal format file reference structure.
+   FNCFileReferenceToMACOS : Generates a MACOS compliant file reference
+			     from an internal format file reference structure.
+   FNCFileReferenceToVMS : Generates a VMS compliant file reference
+			   from an internal format file reference structure.
+   FNCFileReferenceString: General purpose file reference generator.
+
+----------------------------------------------------------------------------
+Binary Data Conversion Library : For converting between various machine
+				 representation of binary numbers and IEEE
+				 format.
+----------------------------------------------------------------------------
+
+   BCFloatToIEEE : Convert a machine dependent format single precision 
+		   floating point number to IEEE format.
+   BCIEEEToFloat : Convert an IEEE format single precision 
+		   floating point number to current machine dependent format.
+   BCDoubleToIEEE : Convert a machine dependent format double precision 
+		   floating point number to IEEE format.
+   BCIEEEToDouble: Convert an IEEE format double precision 
+		   floating point number to current machine dependent format.
+   BCGFloatToIEEE: Convert a machine dependent format double precision 
+		   floating point number to IEEE format. 
+		   Alternate representation available only on VAX/VMS systems.
+   BCIEEEToGFloat: Convert an IEEE format double precision 
+		   floating point number to current machine dependent format.
+		   Alternate representation available only on VAX/VMS systems.
+   BCShortToIEEE : Convert a machine dependent format two byte integer
+		   number to IEEE format.
+   BCIEEEToShort : Convert an IEEE format two byte integer
+		   number to current machine dependent format.
+   BCIntegerToIEEE: Convert a machine dependent format four byte integer
+		   number to IEEE format.
+   BCIEEEToInteger: Convert an IEEE format four byte integer
+		   number to current machine dependent format.
+   BCLongIntegerToIEEE: Convert a machine dependent format eight byte integer
+		   number to IEEE format.
+   BCIEEEToLongInteger: Convert an IEEE format eight byte integer
+		   number to current machine dependent format.
+   BCReverseByteOrder : Reverse the store order of a string of bytes.
+			Does byte and word swapping.
+   VAXSetFormat : Define the machine dependent format to be VAX/VMS systems.
+   SunSetFormat : Define the machine dependent format to be Sun systems.
+   PCSetFormat : Define the machine dependent format to be Intel PC systems
+		 using IEEE format.
+   MSBSetFormat : Define the machine dependent format to be Intel PC systems
+		 using Microsofts Binary format (prominent pre 1987).
+   IBM370SetFormat : Define the machine dependent format to be IBM 370 systems.
+   HP1000SetFormat : Define the machine dependent format to be HP 1000 systems.
+   
+----------------------------------------------------------------------------
+parser library : Contains functions for parsing  and manipulating strings
+----------------------------------------------------------------------------
+
+   cleanparse : Divides a string into sub parts and removes any
+		leading or trailing spaces from each part.
+   clispc     : Remove trailing spaces from a string.
+   colparse   : Generates a list of columns names which match a given pattern.
+	        Requires DFS.
+   dojustify  : Justify text within an array. Center, left and right 
+	       justification is supported.
+   findrep    : Find all occurrence of a substring in a string and replace
+		it with another substring.
+   findrep2   : Find all occurrence of a substring in a string and replace
+		it with another substring. This does not alter the original 
+		string.
+   findstr    : Find a substring in a string and return the index of
+		where it begins in the string. A search toggle may be
+		provide to allow "quoted" to skipped.
+   getword    : Retrieve the next textual word from a file pointer.
+   glob       : Return a list of file names which match a given pattern.
+   ismatch    : Determines if a string matches a given pattern.
+   kw_match   : Return the index the keyword a given string matches.
+		Unique partial matches are allowed.
+   mop        : Parse a string using a mask. String must match all fixed
+		portions of pattern.
+   mop2       : Parse a string using a mask. Partial matches of pattern are
+		allowed.
+   nextword   : Returns the next word from a given string.
+   nstrcpy    : Copies a specific number of bytes from one string to another
+		and insures that the destination string is NULL terminated.
+   packlist   : Removes all strings in an array of strings which have 
+		zero length.
+   pad_str    : Pads a string with spaces to a given length.
+   parse      : Divide a string into substrings according to a given
+		delimiter. Quoted portions of string are not divided.
+   pattern_compare : Compares a string to a given pattern. The pattern is
+		     specified in textual form. Much better than
+		     ismatch(), more like UNIX pattern matching.
+   pattern_dump : Describe a compiled pattern.
+   pattern_free : Deletes a PATTERN structure from memory.
+   pattern_make : Creates and instance of a PATTERN structure.
+   pattern_match : Determines if a string matches a given pattern. The
+		   pattern is given in compiled form.
+   pattern_parse : Compiles a pattern by converting a textual pattern into 
+		   a token list.
+   rcomfile   : Reads a command line from a file. Specific to DFS.
+   scasedown  : Convert a string to lower case.
+   scaseup    : Convert a string to upper case.
+   setstr     : Duplicates a string in memory (just like strdup(), 
+		you should use strdup()).
+   strip_comment : Removes comment text from a string. A comment begins
+		   with a "/*".
+   stripnl    : Removes the trailing newline from a string.
+   trimspc    : Removes trailing and leading spaces from a line.
+   truncate_str : Truncates a string to a given length.
+   unescape   : Remove all occurrences of the given "escape" character 
+	        from a string.
+   unquote    : Remove all quote (") from a string.
+   unquote2   : Removes just the first and last quote from a string.
+
+----------------------------------------------------------------------------
+List Management Library : Provides a simple method for managing
+      collects of data.
+----------------------------------------------------------------------------
+
+   list_dump      : Dump the contents of a list for debugging purposes.
+   list_find_node : Locate a node in list given a node name.
+   list_free      : Free all memory associated with a list.
+   list_free_node : Free all memory associated with a list node.
+   list_get_data  : Return the data portion of a list node.
+   list_insert_node : Insert a node after a given node.
+   list_make_node : Create an instance of a list node.
+   list_pop_node  : Remove the first node in a list.
+   list_push_node : Add a node to the end of a list.
+   list_set_data  : Define the data portion a node.
+
+----------------------------------------------------------------------------
+Message Management Library : Provides a formal way to define 
+      collections of messages an application may print to the
+      screen. Messages may contain any number of variables.
+----------------------------------------------------------------------------
+
+   mm_pmessage : Format and print a message to the current output
+		 file. Messages are prefixed with trace information.
+   mm_set_output : Define which file to place the messages in.
+   mm_trace_pop  : Removes the most recently added prefix from the
+		   prefix list.
+   mm_trace_push : Adds text to the prefix list.
+
+----------------------------------------------------------------------------
+IGPP SQL Parser Library : Parses a textual SQL query into a data structure
+     for use by applications which need to provide SQL query support.
+     The parser does have some IGPP specific additions such as fuzzy
+     query support. The parser does not support sub-queries.
+----------------------------------------------------------------------------
+
+   sql_parse_query : Parses a textual query in SQL syntax into a 
+		     a data structure.
+   sql_dump_query  : Dumps a textual description of an SQL query data 
+		     structure. (Meant for debugging purposes).
+
+----------------------------------------------------------------------------
+Packet Library : For establishing connections to between applications
+		 and passing tagged packets of information.
+----------------------------------------------------------------------------
+
+   close_con : Close a connection to a server.
+   gread     : A low level read of a port with a guaranteed
+	       number of bytes read.
+   gwrite    : A low level write of a port with a guaranteed
+	       number of bytes written.
+   init_app  : Initializes an application for use of the packet
+	       library.
+   net_close_db : Sends a request to close a database at a server.
+   net_done  : Graceful termination a connection to a server.
+   net_open_db  : Sends a request to open a database at a server.
+   net_query.c  : Sends a query to a server.
+   net_register : Send user and host registration information to a server.
+   net_return   : Determine the return status of a remotely executed 
+		  operation.
+   net_set_timeout : Set the number of seconds which the client is to wait
+		     for a response before the connection is considered dead.
+   net_update   : Send an update type query the server.
+   net_version  : Send the registered version/identification information
+		  down a connection.
+   open_con     : Open a connection to another application. Used by both
+		  clients and servers.
+   packet_dump  : Dump the contents of a packet (Used for debugging purposes).
+   recv_packet  : Reads a packet from a connection.
+   send_errmsg  : Sends an error message down a connection.
+   send_packet  : Send a packet down a connection.
+   send_tag     : Send a dataless tag down a connection.
+   verify_version : Requests version information (from a server) and
+		    compares it to the that required by the application.
+		    Required version information is set by init_app().
+   
+----------------------------------------------------------------------------
+DITDOS Library : For creating distributed information tracking and
+		 data ordering system applications.
+----------------------------------------------------------------------------
+
+   ditdos_broker_destroy      : Destroy an instance of a DITDOS broker.
+   ditdos_broker_use          : Open a connection to a broker and make
+				it current broker.
+   ditdos_broker_create       : Create an instance of a DITDOS broker
+				using keyword/value syntax.
+   ditdos_broker_make         : Create an instance of a DITDOS broker
+				given a broker data structure.
+   ditdos_broker_process_args : Define multiple values in a broker data
+				structure using keyword/value syntax.
+   ditdos_broker_set_option   : Set the value of a single element in broker
+				data structure using keyword/value syntax.
+   ditdos_broker_options_check: Insure that all required elements in a 
+				broker data structure are defined.
+   ditdos_broker_write        : Write a single record to a DITDOS broker.
+   ditdos_broker_open         : Open the database table of a DITDOS broker.
+   ditdos_broker_get_database : Translate a database reference name into
+				a database data structure.
+   ditdos_class_create        : Create a class table.
+   ditdos_class_write         : Write a single record to a class table.
+   ditdos_class_access_valid  : Check if a given access method is allowed
+				for a given class/instance.
+   ditdos_class_find          : Translate a given class/instance into a 
+				class data structure.
+   ditdos_class_define        : Define the attributes for a class/instance
+				using keyword/value syntax.
+   ditdos_class_delete        : Delete a specific class/instance record from
+				the class table.
+   ditdos_class_process_args  : Set multiple elements in a class data structure
+				using keyword/value syntax.
+   ditdos_class_set_option    : Set the value of a single element in class
+				data structure.
+   ditdos_class_check_options : Insure that all required elements of a class
+				data structure are defined.
+   ditdos_open_broker         : Open a connection to a DITDOS server.
+				This is a client side function.
+   ditdos_close_broker        : Close a connection to a DITDOS server.
+				This is a client side function.
+   ditdos_open_database       : Open a database at the server.
+				This is a client side function.
+   ditdos_close_database      : Close a database at the server.
+				This is a client side function.
+   ditdos_send_query          : Send a query to the server.
+				This is a client side function.
+   ditdos_cancel_query        : Cancel the currently running server.
+				This is a client side function.
+   ditdos_curator_create      : Create a curator table.
+   ditdos_curator_write       : Write a record to a curator table.
+   ditdos_curator_delete      : Delete a specific record from a curator table.
+   ditdos_curator_define      : Define the attributes of a curator using
+				keyword/value syntax.
+   ditdos_curator_process_args: Set multiple elements in a curator data 
+				structure using keyword/value syntax.
+   ditdos_curator_set_option  : Set the value of a single element in a curator
+				data structure using keyword/value syntax.
+   ditdos_curator_check_options: Check to insure that all required elements
+				 in a curator data structure are defined.
+   ditdos_database_use        : Open a database in the currently opened broker.
+   ditdos_database_release    : Close the currently opened database.
+   ditdos_database_destroy    : Destroy an instance of a DITDOS database.
+   ditdos_database_create     : Create an instance of a DITDOS database using
+				keyword/value syntax.
+   ditdos_database_make       : Create an instance of a DITDOS database given
+				database data structure.
+   ditdos_database_process_args: Set multiple elements in a database data 
+			  	 structure using keyword/value syntax.
+   ditdos_database_set_option : Set the value of a single element in a database
+				data structure using keyword/value syntax.
+   ditdos_database_check_options: Check to insure that all required elements
+				  in a database data structure are defined.
+   ditdos_datasets_find       : Translate a dataset reference name into a 
+				datasets data structure.
+   ditdos_datasets_exist      : Check is a dataset with a given reference name
+				exists.
+   ditdos_datasets_open       : Open the datasets table of a database.
+   ditdos_datasets_define     : Define the attributes of a datasets using
+				keyword/value syntax.
+   ditdos_datasets_delete     : Delete a specific dataset entry from the 
+				datasets table.
+   ditdos_datasets_create     : Create an instance of datasets table.
+   ditdos_datasets_write      : Write a single record into a datasets table.
+   ditdos_datasets_process_args: Set multiple elements in a datasets data 
+			  	 structure using keyword/value syntax.
+   ditdos_datasets_set_option : Set the value of a single element in a datasets
+				data structure using keyword/value syntax.
+   ditdos_datasets_check_options: Check to insure that all required elements
+				  in a datasets data structure are defined.
+   ditdos_open_internal       : Open a dataset which is stored in the DITDOS
+				internal format (UCLA/IGPP Flatfile).
+   ditdos_show                : Show the settings of one or more global
+				variables.
+   ditdos_init_global         : Initialize all DITDOS global variables.
+   ditdos_make_path           : Insure that all directories along a given
+				path exists. Creating those that don't.
+   ditdos_strcat              : Concatenate two strings placing the result
+				in a third string. Proper termination of the
+				destination string is insured.
+   ditdos_privs_create        : Create an instance of a privs table.
+   ditdos_privs_write         : Write a single record to a privs table.
+   ditdos_privs_define        : Define the attributes of a privs record using
+				keyword/value syntax.
+   ditdos_privs_delete        : Delete a specific privs entry from the 
+				privs table.
+   ditdos_privs_valid         : Determine is a specific operation is permitted
+				on a given table by a given user at a specific
+				host.
+   ditdos_privs_process_args  : Set multiple elements in a privs data 
+			  	structure using keyword/value syntax.
+   ditdos_privs_set_option    : Set the value of a single element in a privs
+				data structure using keyword/value syntax.
+   ditdos_privs_check_options : Check to insure that all required elements
+				in a privs data structure are defined.
+
+----------------------------------------------------------------------------
+Flatfile I/O Library : For creating, deleting, managing and using UCLA/IGPP 
+		       flatfiles.
+----------------------------------------------------------------------------
+
+ffadd_desc       : Add one or more records to descriptor portion of 
+		   a flatfile.
+ffbind           : Associate a program variable to field in a flatfile.
+ffbulk_write_fd  : Copies the contents of flatfile beginning at the
+		   current position to the end of the flatfile to a
+		   given file descriptor.
+ffbulk_write_file: Copies the contents of flatfile beginning at the
+		   current position to the end of the flatfile to a
+		   given file pointer.
+ffcheck_type     : Check to see if a given type code is a valid flatfile data
+		   type.
+ffclose_select   : Close selective portions of a flatfile.
+ffcol_type       : Return the data type for a given field (column) in
+		   an opened flatfile..
+ffcol_width      : Return the width in bytes for a given field (column) in
+		   an opened flatfile..
+ffcreate         : Create a flatfile given a set of descriptors.
+ffdelete_rec     : Identifies a record for deletion from a flatfile.
+ffdo_bind        : Synchronize a bound application variables and the
+		   current flatfile record.
+ffexists         : Check is a flatfile with a given name exists.
+ffflag_rec       : Place flags in all fields of the current record.
+ffget_col_str    : Return the value associated with a string field.
+ffget_col_val    : Return the value associated with a numeric field.
+ffget_desc       : Get the descriptor entry for a given field.
+ffinsert_rec     : Indentifies a record for insertion into the flatfile
+		   at the current position in the flatfile.
+ffisflag         : Determines if the value in a given field is a flag value.
+ffmake_path      : Makes all necessary directories in a given file name 
+		   reference.
+ffmove_bin       : Move to the record in a flatfile where a given field has
+		   specific value. A binary search method is used.
+ffmove_rel_rec   : Move to a new record is defined relative to the current
+		   position.
+ffmove_to_rec    : Move to a specific record given its absolute reference.
+ffopen           : Open a flatfile.
+ffopen_segment   : Opens the next segment of a virtual flatfile.
+ffopen_select    : Open selective portions of a flatfile.
+ffpad_str        : Pad string with spaces. String may no longer be
+		   properly terminated.
+ffprint_rec      : Prints the contents of the current record to the screen.
+		   Primarily for debugging purposes.
+ffread_abs       : Reads the contents of the abstract portion of the flatfile
+		   and places the text into an array of strings.
+ffread_rec       : Read the next record from the flatfile.
+ffscol_index     : Returns the index of a field given its short field name.
+ffset_col_flag   : Set a given field (column) to a flag value.
+ffset_col_str    : Set a field to a given string value.
+ffset_col_val    : Set a field to a given numeric value.
+ffunlink         : Delete the existence of a flatfile.
+ffupdate         : Perform all deletions and inserts defined with calls
+		   to ffdelete_rec() and ffinsert_rec().
+ffwrite_abs      : Write the abstract portion of a flatfile.
+ffwrite_desc     : Write the descriptor portion of a flatfile.
+ffwrite_hed      : Write the header portion of a flatfile.
+ffwrite_rec      : Write a record into the data portion of a flatfile.
+
+----------------------------------------------------------------------------
+Data Flow System Library : For passing data in the UCLA/IGPP flatfile
+			   format using the packet library.
+----------------------------------------------------------------------------
+
+   dfs_bind     : To bind an application variable to a data flow field.
+   dfs_bindcopy : Synchronize the contents of bound variables and data flow
+		  fields.
+   dfs_type_old_to_new : Converts from old DFS data type codes to new.
+   dfs_type_new_to_old : Converts from new DFS data type codes to old.
+   dfs_colnum  : Returns the index of the field (column) given its
+		 textual column name.
+   dfs_dataend : Flushes all data buffers and send a tag indicating 
+		 end of data.
+   dfs_defbind : Perform a matched type binding between a data flow field
+		 and an application variable.
+   dfs_build_desc_map : Builds a bind map for a field in the descriptor
+			database.
+   dfs_init : Performs initialization actions for using the DFS library.
+   dfs_exists : Determines if a field with a given name exists in the
+		data flow.
+   dfs_set_in_flow_con : Sets the input connection for the data flow.
+   dfs_lname : Returns the long name for a field in the data flow.
+   main      : The wrapper main() function for DFS applications.
+   dfs_make_flow : Creates an instance of a data flow.
+   dfs_makedesc : Defines a field in the data flow (make a descriptor).
+   dfs_set_out_flow_con : Sets the output connection for the data flow.
+   dfs_perror : Outputs a data flow error message.
+   dfs_rdata  : Advances one record in the data flow. Reads data from the
+		input connection if necessary.
+   dfs_rdesc  : Reads the descriptors of the data flow from the input
+		connection.
+   dfs_rmvdesc_all : Deletes are fields from the data flow (Removes all 
+		     descriptors).
+   dfs_int_rvalue : Reads an integer return value from a connection.
+   dfs_double_rvalue : Reads a double return value from a connection.
+   dfs_char_rvalue : Reads a string of characters return value from 
+		     a connection.
+   dfs_set_flow_con : Sets both the input and output flow connections
+		      to a same connection.
+   dfs_sizeof : Returns the size in bytes of a data flow data type.
+   dfs_sname  : Returns the short name of a given field in the data flow.
+   dfs_type   : Returns the data type of a given field in the data flow.
+   dfs_unbind_all : Remove references to all bound variables.
+   dfs_uniquename: Returns a unique field name given a desired field name.
+   dfs_units  : Returns the units of a given field in the data flow.
+   dfs_value  : Returns a pointer to the value of a field in the data flow.
+   dfs_wdata  : Writes a the current data flow record out to the connection.
+		Data is buffered so the write is delayed until the buffer
+		fills.
+   dfs_wdata_packet : Write a packet to the output connection which contains
+		      all data in the current output data buffer.
+   dfs_wdesc  : Write the current descriptors to the output connection.
+   dfs_width  : Return the width of a given field in the data flow.
+   dfs_int_wvalue    : Write a integer value to the output connection.
+   dfs_double_wvalue : Write a double value to the output connection.
+   dfs_char_wvalue   : Write a string of characters to the output connection.

@@ -1,0 +1,40 @@
+/* MODIFICATIONS:
+/*	92-08  --  EFRIED
+/*	920916 --  EFRIED
+/*		last changes made
+
+/************************MAG Data Quality *************************************/
+/* Template: Data Quality Template -                             Rev: 19890821*/
+/* Note:       This template shall be completed for each dataset.             */
+/*                                                                            */
+/*                                                                            */
+/* Hierarchy:    DATAQUALITY                                                  */
+/*                   DATAQUALID                                               */
+/*                     DATAQUALD                                              */
+/*                   DATACONTAMID                                             */
+/*                     DATACONTAMD                                            */
+
+OBJECT                         = DATAQUALITY
+  INSTRUMENT_HOST_ID             = 'VG2'
+  INSTRUMENT_ID                  = 'MAG'
+
+  OBJECT                         = DATAQUALID
+    DATA_QUALITY_ID              = '-1'
+
+    OBJECT                       = DATAQUALD
+      DATA_QUALITY_DESC            = "
+ A data quality id of -1 indicates that no attempt has been  
+ made to specify a data quality for this time range."
+    END_OBJECT                     = DATAQUALD
+  END_OBJECT                     = DATAQUALID
+
+  OBJECT                         = DATACONTAMID
+    CONTAMINATION_ID               = '-1'
+
+    OBJECT                         = DATACONTAMD
+      CONTAMINATION_DESC             = "
+ A contamination code of -1 signifies that no evaluation of  
+ possible contamination has been made."
+    END_OBJECT                     = DATACONTAMD
+  END_OBJECT                     = DATACONTAMID
+END_OBJECT                     = DATAQUALITY

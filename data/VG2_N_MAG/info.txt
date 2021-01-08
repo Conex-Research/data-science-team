@@ -1,0 +1,5 @@
+Retrieved from PDS-PPI IGPP UCLA on Tue Jan 05 15:15:05 GMT 2021
+
+You can down this data again with the URL:
+
+/ditdos/download?id=pds://PPI/VG2-N-MAG-4-RDR-HGCOORDS-1.92SEC-V1.0

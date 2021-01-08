@@ -1,0 +1,67 @@
+PDS_VERSION_ID       = PDS3                                                  
+DATA_SET_ID          = "VG2-N-MAG-4-RDR-HGCOORDS-1.92SEC-V1.0"               
+RECORD_TYPE          = STREAM                                                
+                                                                             
+OBJECT               = TEXT                                                  
+  PUBLICATION_DATE   = 2011-11-07                                            
+  NOTE               = "ERRATA.TXT reflects any changes or errors made       
+                        to this volume."                                     
+END_OBJECT           = TEXT                                                  
+END                                                                          
+                                                                             
+  Non-Standard Practices                                                     
+The PDS standards do not specify where to store the required MD5 checksum    
+file for a volume.  We have placed it in the root dietary of the volume      
+with the file name "CHECKSUMS.TXT".  This may be considered invalid by some  
+verifiers.                                                                   
+                                                                             
+============================================================================ 
+                                                                             
+Version 1.1 Voyager Data Sets                                                
+                                                                             
+Some of the Voyager data sets were previously archived with                  
+the PDS and NSSDC as version 1.0. Changes to the version 1.1 data sets       
+generally include minor changes to the style of the time column and flag     
+values, and upgrading of labels and catalog templates to PDS version 3.      
+These version 1.1 data sets supersede any previously archived data sets.     
+                                                                             
+---------------------------------------------------------------------------- 
+                                                                             
+ASCII data file record formats                                               
+                                                                             
+ASCII data tables contained in this volume are fixed width and space         
+delimited. The PDS Standards recommend using fixed width comma delimited     
+fields in ASCII tables. In general this recommendation was not followed in   
+order to provide data in the same format in which they were originally       
+provided to PDS.                                                             
+                                                                             
+---------------------------------------------------------------------------- 
+                                                                             
+/DOCUMENT/*/*.ASC and /DOCUMENT/*/*.PDF files                                
+                                                                             
+Copies of previously published documents found on the /DOCUMENT/ sub-        
+directories contain some known misspellings. These either result from        
+misspellings that follow the original documents or else errors introduced in 
+the conversion of these documents to ASCII and PDF format.                   
+                                                                             
+---------------------------------------------------------------------------- 
+/CATALOG/VG_*_PERSON.CAT                                                     
+                                                                             
+In the CATALOG/VG_*_PERSON.CAT file the PERSONNEL_INFORMATION object contains
+the element NOTE which is neither required nor optional, but does provide the
+user with valuable information.                                              
+                                                                             
+============================================================================ 
+                                                                             
+If you find an error on this volume, please report the error to the          
+PDS Operator at the PPI Node of the PDS.                                     
+                                                                             
+Email: pds_operator@igpp.ucla.edu                                            
+                                                                             
+Telephone: (310) 206-6073                                                    
+                                                                             
+U.S. Mail: PDS Operator                                                      
+           c/o Dr. Raymond Walker                                            
+           UCLA - IGPP                                                       
+           Los Angeles, CA 90095-1567                                        
+                                                                             

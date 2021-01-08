@@ -1,0 +1,86 @@
+ PDS_VERSION_ID                     = PDS3                                   
+ LABEL_REVISION_NOTE                = "D.KAZDEN (PPI), 2011-10-10"           
+ RECORD_TYPE                        = STREAM                                 
+                                                                             
+ OBJECT                             = PERSONNEL                              
+ PDS_USER_ID                        = NFNESS                                 
+                                                                             
+ OBJECT                             = PERSONNEL_INFORMATION                  
+ FULL_NAME                          = "NORMAN F. NESS"                       
+ LAST_NAME                          = NESS                                   
+ TELEPHONE_NUMBER                   = "3028318116"                           
+ ALTERNATE_TELEPHONE_NUMBER         = "3028318111"                           
+ FAX_NUMBER                         = "3028311843"                           
+ INSTITUTION_NAME                   = "UNIVERSITY OF DELAWARE"               
+ NODE_ID                            = "N/A"                                  
+ PDS_AFFILIATION                    = "N/A"                                  
+ REGISTRATION_DATE                  = 1998-05-01                             
+ PDS_ADDRESS_BOOK_FLAG              = "N"                                    
+ NOTE                               = "MAG Principle Investigator"           
+ ADDRESS_TEXT                       = "Bartol Research Institute             
+                                       University of Delaware Newark, DE     
+                                       19716 USA"                            
+ END_OBJECT                         = PERSONNEL_INFORMATION                  
+                                                                             
+ OBJECT                             = PERSONNEL_ELECTRONIC_MAIL              
+ ELECTRONIC_MAIL_ID                 = "nfness@bartol.udel.edu"               
+ ELECTRONIC_MAIL_TYPE               = "INTERNET"                             
+ PREFERENCE_ID                      = 1                                      
+ END_OBJECT                         = PERSONNEL_ELECTRONIC_MAIL              
+ END_OBJECT                         = PERSONNEL                              
+                                                                             
+ OBJECT                             = PERSONNEL                              
+ PDS_USER_ID                        = JECONNERNEY                            
+                                                                             
+ OBJECT                             = PERSONNEL_INFORMATION                  
+ FULL_NAME                          = "JOHN E. CONNERNEY"                    
+ LAST_NAME                          = CONNERNEY                              
+ TELEPHONE_NUMBER                   = "3012865884"                           
+ ALTERNATE_TELEPHONE_NUMBER         = "UNK"                                  
+ FAX_NUMBER                         = "3012861683"                           
+ INSTITUTION_NAME                   = "GODDARD SPACE FLIGHT CENTER"          
+ NODE_ID                            = "N/A"                                  
+ PDS_AFFILIATION                    = "N/A"                                  
+ REGISTRATION_DATE                  = 1998-05-01                             
+ PDS_ADDRESS_BOOK_FLAG              = "N"                                    
+ NOTE                               = "MAG Co-Investigator"                  
+ ADDRESS_TEXT                       = "NASA/Goddard Space Flight Center      
+                                       Mailstop 692.0 Greenbelt, MD 20771    
+                                       USA"                                  
+ END_OBJECT                         = PERSONNEL_INFORMATION                  
+                                                                             
+ OBJECT                             = PERSONNEL_ELECTRONIC_MAIL              
+ ELECTRONIC_MAIL_ID                 = "jec@lepjec.gsfc.nasa.gov"             
+ ELECTRONIC_MAIL_TYPE               = "INTERNET"                             
+ PREFERENCE_ID                      = 1                                      
+ END_OBJECT                         = PERSONNEL_ELECTRONIC_MAIL              
+ END_OBJECT                         = PERSONNEL                              
+                                                                             
+ OBJECT                             = PERSONNEL                              
+ PDS_USER_ID                        = RPLEPPING                              
+                                                                             
+ OBJECT                             = PERSONNEL_INFORMATION                  
+ FULL_NAME                          = "RONALD P. LEPPING"                    
+ LAST_NAME                          = LEPPING                                
+ TELEPHONE_NUMBER                   = "3012865413"                           
+ ALTERNATE_TELEPHONE_NUMBER         = "UNK"                                  
+ FAX_NUMBER                         = "3012861648"                           
+ INSTITUTION_NAME                   = "GODDARD SPACE FLIGHT CENTER"          
+ NODE_ID                            = "N/A"                                  
+ PDS_AFFILIATION                    = "N/A"                                  
+ REGISTRATION_DATE                  = 1998-05-01                             
+ PDS_ADDRESS_BOOK_FLAG              = "N"                                    
+ NOTE                               = "MAG Co-Investigator"                  
+ ADDRESS_TEXT                       = "NASA/Goddard Space Flight Center      
+                                       Mailstop 696.0 Greenbelt, MD 20771    
+                                       USA"                                  
+ END_OBJECT                         = PERSONNEL_INFORMATION                  
+                                                                             
+ OBJECT                             = PERSONNEL_ELECTRONIC_MAIL              
+ ELECTRONIC_MAIL_ID                 = "rpl@leprpl.gsfc.nasa.gov"             
+ ELECTRONIC_MAIL_TYPE               = "INTERNET"                             
+ PREFERENCE_ID                      = 1                                      
+ END_OBJECT                         = PERSONNEL_ELECTRONIC_MAIL              
+ END_OBJECT                         = PERSONNEL                              
+                                                                             
+ END                                                                         

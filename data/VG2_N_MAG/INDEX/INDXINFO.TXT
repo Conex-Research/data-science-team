@@ -1,0 +1,17 @@
+PDS_VERSION_ID       = PDS3                                                  
+RECORD_TYPE          = STREAM                                                
+                                                                             
+OBJECT               = TEXT                                                  
+  PUBLICATION_DATE   = 2011-06-02                                            
+  NOTE               = "INDXINFO.TXT describes the contents of this          
+                        directory."                                          
+END_OBJECT           = TEXT                                                  
+END                                                                          
+                                                                             
+This directory contains a file (INDEX.TAB) which gives the name and location 
+of all user files on this volume.                                            
+                                                                             
+    key files:                                                               
+        INDEX.TAB    - contains an index of this volume                      
+        INDEX.LBL    - describes the columns and format of INDEX.TAB         
+                                                                             
