@@ -20,4 +20,3 @@ Download dataset here:
 
 Information about the dataset: 
 * https://pds.nasa.gov/ds-view/pds/viewProfile.jsp?dsid=VG2-N-MAG-4-RDR-HGCOORDS-1.92SEC-V1.0
-* https://pds.jpl.nasa.gov/ds-view/pds/viewProfile.jsp?dsid=VG2-S-MAG-4-RDR-HGCOORDS-1.92SEC-V1.1
