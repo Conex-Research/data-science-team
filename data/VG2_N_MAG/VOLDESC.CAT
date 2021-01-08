@@ -1,0 +1,94 @@
+PDS_VERSION_ID                = PDS3                                         
+RECORD_TYPE                   = STREAM                                       
+                                                                             
+OBJECT                        = VOLUME                                       
+  VOLUME_SERIES_NAME          = "VOYAGERS TO THE OUTER PLANETS"              
+  VOLUME_SET_NAME             = "VOYAGER AT NEPTUNE:                         
+                                 VG2-N-MAG-4-RDR-HGCOORDS-1.92SEC-V1.0"      
+  VOLUME_SET_ID               = USA_NASA_PDS_VG2_9048                        
+  VOLUMES                     = 1                                            
+  VOLUME_NAME                 = "VG2 at Neptune:                             
+                                  VG2-N-MAG-4-RDR-HGCOORDS-1.92SEC-V1.0"     
+  VOLUME_ID                   = VG2_9048                                     
+  VOLUME_VERSION_ID           = "VERSION 2"                                  
+  VOLUME_FORMAT               = "UDF_ISO-9660_BRIDGE"                        
+  MEDIUM_TYPE                 = "ELECTRONIC"                                 
+  PUBLICATION_DATE            = 2011-06-02                                   
+  DESCRIPTION                 = "                                            
+CERTIFIED This volume contains data and supporting documentation from the    
+Voyager 2 Neptune Encounter for the VG2-N-MAG-4-RDR-HGCOORDS-1.92SEC-V1.0    
+data set from 1989-08-22 to 1989-08-29."                                     
+                                                                             
+DATA_SET_ID                   = "VG2-N-MAG-4-RDR-HGCOORDS-1.92SEC-V1.0"      
+MISSION_NAME                  = "VOYAGER"                                    
+INSTRUMENT_HOST_NAME          = "VOYAGER 2"                                  
+                                                                             
+  OBJECT                      = DATA_PRODUCER                                
+    INSTITUTION_NAME          = "UNIVERSITY OF CALIFORNIA, LOS ANGELES"      
+    FACILITY_NAME             = "PDS PLANETARY PLASMA INTERACTIONS NODE"     
+    FULL_NAME                 = "RAYMOND WALKER"                             
+    DISCIPLINE_NAME           = "PLASMA INTERACTIONS"                        
+    ADDRESS_TEXT              = "UCLA / IGPP                                 
+                                 LOS ANGELES, CA 90095-156704                
+                                 USA"                                        
+    TELEPHONE_NUMBER          = "3102066073"                                 
+    ELECTRONIC_MAIL_TYPE      = "INTERNET"                                   
+    ELECTRONIC_MAIL_ID        = "pds_operator@igpp.ucla.edu"                 
+  END_OBJECT                  = DATA_PRODUCER                                
+                                                                             
+  OBJECT                      = DATA_SUPPLIER                                
+   INSTITUTION_NAME           = "NASA/GODDARD SPACE FLIGHT CENTER"           
+   FACILITY_NAME              = "NASA/GODDARD SPACE FLIGHT CENTER"           
+   FULL_NAME                  = "JOHN E. CONNERNEY"                          
+   DISCIPLINE_NAME            = "PLASMA INTERACTIONS"                        
+   ADDRESS_TEXT               = "NASA/Goddard Space Flight Center            
+                                 Mailstop 692.0                              
+                                 Greenbelt, MD 20771                         
+                                 USA"                                        
+   TELEPHONE_NUMBER           = "3012865884"                                 
+   ELECTRONIC_MAIL_TYPE       = "INTERNET"                                   
+   ELECTRONIC_MAIL_ID         = "jec@lepjec.gsfc.nasa.gov"                   
+   NOTE                       = "submitted the MAG data"                     
+  END_OBJECT                  = DATA_SUPPLIER                                
+                                                                             
+  OBJECT                      = DATA_SUPPLIER                                
+   INSTITUTION_NAME           = "NASA/GODDARD SPACE FLIGHT CENTER"           
+   FACILITY_NAME              = "NASA/GODDARD SPACE FLIGHT CENTER"           
+   FULL_NAME                  = "RONALD P. LEPPING"                          
+   DISCIPLINE_NAME            = "PLASMA INTERACTIONS"                        
+   ADDRESS_TEXT               = "NASA/Goddard Space Flight Center            
+                                 Mailstop 696.0                              
+                                 Greenbelt, MD 20771                         
+                                 USA"                                        
+   TELEPHONE_NUMBER           = "3012865413"                                 
+   ELECTRONIC_MAIL_TYPE       = "INTERNET"                                   
+   ELECTRONIC_MAIL_ID         = "rpl@leprpl.gsfc.nasa.gov"                   
+   NOTE                       = "submitted the MAG data"                     
+  END_OBJECT                  = DATA_SUPPLIER                                
+                                                                             
+  OBJECT                      = DATA_SUPPLIER                                
+   INSTITUTION_NAME           = "NATIONAL SPACE SCIENCE DATA CENTER"         
+   FACILITY_NAME              = "NATIONAL SPACE SCIENCE DATA CENTER"         
+   FULL_NAME                  = "NATIONAL SPACE SCIENCE DATA CENTER"         
+   ADDRESS_TEXT               = "Code 633                                    
+                                 Goddard Space Flight Center                 
+                                 Greenbelt, MD 20771                         
+                                 USA"                                        
+   TELEPHONE_NUMBER           = "3012866695"                                 
+   ELECTRONIC_MAIL_TYPE       = "NSI/DECNET"                                 
+   ELECTRONIC_MAIL_ID         = "NSSDCA::REQUEST"                            
+   NOTE                       = "the CRS, MAG and trajectory data            
+                                 sets were obtained from the NSSDC"          
+  END_OBJECT                  = DATA_SUPPLIER                                
+                                                                             
+  OBJECT                      = CATALOG                                      
+    ^DATA_SET_CATALOG         = "VG2_NEP_MAG_HG_1_92SEC_DS.CAT"              
+    ^INSTRUMENT_CATALOG       = "VG2_MAG_INST.CAT"                           
+    ^INSTRUMENT_HOST_CATALOG  = "VG2_INST_HOST.CAT"                          
+    ^MISSION_CATALOG          = "VG_MISSION.CAT"                             
+    ^PERSONNEL_CATALOG        = "VG_MAG_PERSON.CAT"                          
+    ^REFERENCE_CATALOG        = "VG2_N_MAG_REF.CAT"                          
+  END_OBJECT                  = CATALOG                                      
+                                                                             
+END_OBJECT                    = VOLUME                                       
+END                                                                          

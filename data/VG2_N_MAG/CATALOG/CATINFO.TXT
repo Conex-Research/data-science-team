@@ -1,0 +1,34 @@
+PDS_VERSION_ID       = PDS3                                                  
+RECORD_TYPE          = STREAM                                                
+                                                                             
+OBJECT               = TEXT                                                  
+  PUBLICATION_DATE   = 2011-11-07                                            
+  NOTE               = "CATINFO.TXT describes the contents of this           
+                        directory."                                          
+END_OBJECT           = TEXT                                                  
+END                                                                          
+                                                                             
+This directory contains metadata associated with this volume. This           
+information is divided into a series of separate template files. These       
+include the files MISSION.CAT, describing the Voyager mission, INSTHOST.CAT, 
+describing the Voyager spacecraft, *INST.CAT file, describing the Voyager    
+instrument, *DS.CAT file, describing the data set contained on               
+this volume, PERSON.CAT file listing contact information for personnel       
+associated with one of the Voyager data sets, and a REF.CAT which            
+describes references related to the Voyager mission, spacecraft or one of    
+the individual instruments or data sets.                                     
+                                                                             
+These files were prepared specifically for the PDS Data Set Catalog          
+maintained by the PDS Central Node (see link at http://pds.jpl.nasa.gov/).   
+                                                                             
+The following table lists the subject described in each of the catalog       
+templates contained in this directory.                                       
+                                                                             
+file                          subject                                        
+                                                                             
+VG_MISSION.CAT                 Voyager Mission                               
+VG_MAG_PERSON.CAT              personnel associated with the Voyager mission 
+VG2_N_MAG_REF.CAT              references associated with the Voyager mission
+VG2_INST_HOST.CAT              Voyager 2 Instrument Host (Spacecraft)        
+VG2_MAG_INST.CAT               VG2 Triaxial Fluxgate Magnetometer instrument 
+VG2_NEP_MAG_HG_1_92SEC_DS.CAT  Data set catalog                              

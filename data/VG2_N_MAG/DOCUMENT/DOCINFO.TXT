@@ -1,0 +1,56 @@
+PDS_VERSION_ID       = PDS3                                                   
+RECORD_TYPE          = STREAM                                                 
+OBJECT               = TEXT                                                   
+  PUBLICATION_DATE     = 2011-06-01                                           
+  NOTE                 = "This file describes the contents of this directory."
+END_OBJECT           = TEXT                                                   
+END                                                                           
+                                                                              
+                                                                              
+The /DOCUMENT directory contains two subdirectories each of which contains    
+a document relevant to the Voyager mission and its instruments. An ASCII text 
+version with all graphics removed (file extension .ASC) is provided for each  
+document, along with a PDF version.                                           
+                                                                              
+/DOCUMENT directory tree structure:                                           
+                                                                              
+  [DOCUMENT]                                                                  
+     |                                                                        
+     |- DOCINFO.TXT   (this file) describes contents of the /DOCUMENT         
+     |                directory tree                                          
+     |                                                                        
+     |                                                                        
+     |- [INSTRUMENT_PAPER]  contains copies of the Voyager MAG investigation  
+     |                description.                                            
+     |                                                                        
+     |                                                                        
+     |- [MISSION_DESCRIPTION] contains copies of the Voyager mission          
+     |                description paper.                                      
+                                                                              
+                                                                              
+  Document description:                                                       
+                                                                              
+    INSTRUMENT_PAPER                                                          
+                   [BEHANNONETAL1977]                                         
+                                                                              
+                                                                              
+    MISSION_DESCRIPTION                                                       
+                    Kohlhase, C. E., and P. A. Penzo, 'Voyager Mission        
+                    Description,' Space Sci. Rev., Vol. 21, No. 2, Nov. 1977, 
+                    pp. 77-101. [REFERENCE_KEY_ID = 'KOHLHASE&PENZO1977']     
+                                                                              
+*Documents reproduced from:                                                   
+   Space Science Reviews, Voyager Project Special Issue,                      
+   Vol. 21, No. 2, Dec. 1977. Reprinted with permission of Kluwer             
+   Academic Publishers, Dordrecht, Boston, London.                            
+                                                                              
+The following copyright applies to all of the Space Science Reviews articles  
+reproduced on this volume:                                                    
+                                                                              
+  This material is posted here with permission of Kluwer Academic             
+  Publishers (Kluwer). Such permission of Kluwer does not in any way          
+  imply Kluwer endorsement of any PDS product or service. Internal or         
+  personal use of this material is permitted. However, permission to          
+  reprint/republish this material for advertising or promotional              
+  purposes or for creating new collective works for resale or                 
+  redistribution must be obtained from Kluwer.                                

@@ -1,0 +1,69 @@
+/***********************MAG Parameter Template ********************************/
+/* MODIFICATIONS:
+/*	From:  JPLPDS::RMONARREZ     6-AUG-1992 13:38:59.22
+/*	92-08	EFRIED
+/*      920916  EFRIED
+/*         last changes made
+
+/* Template: Parameter Template                                 Rev: 19890121 */
+/*                                                                            */
+/* Note:       This template shall be completed for each combination          */
+/*             of data set parameter name, instrument parameter               */
+/*             name and instrument host id associated with a dataset.         */
+/*                                                                            */
+/* Hierarchy:   PARAMETER                                                     */
+
+OBJECT                        = PARAMETER
+  INSTRUMENT_HOST_ID            ="VG2"
+  DATA_SET_PARAMETER_NAME       ="MAGNETIC FIELD VECTOR"
+  INSTRUMENT_PARAMETER_NAME     ="MAGNETIC FIELD COMPONENT"
+  IMPORTANT_INSTRUMENT_PARMS    = 1
+END_OBJECT                    = PARAMETER
+
+
+/******************DS/Inst Parameter Description Template**********************/
+/* MODIFICATIONS:
+/*	From:  JPLPDS::RMONARREZ     6-AUG-1992 13:38:59.22
+/*	92-08	EFRIED
+/*      920916  EFRIED
+/*         changed capitalization
+/*         last changes made
+
+/* Template: Data Set Instrument Parameter Description Template Rev: 19890121 */
+/*                                                                            */
+/* Note:       This template shall be completed for any                       */
+/*             data set or instrument parameter description.                  */
+/*                                                                            */
+/* Hierarchy:   DSINSTPARMD                                                   */
+
+OBJECT                           = DSINSTPARMD
+  DATA_SET_OR_INSTRUMENT_PARM_NM   = "MAGNETIC FIELD VECTOR"
+  DATA_SET_OR_INST_PARM_DESC       = "
+          A derived parameter which combines the 3 orthogonal
+          magnetic field component measurements."
+END_OBJECT                       = DSINSTPARMD
+
+
+
+/******************DS/Inst Parameter Description Template**********************/
+/* MODIFICATIONS:
+/*	921001 -- EFRIED
+/*		  created template
+/*                NEED DESCRIPTION
+/*         last changes made
+
+/* Template: Data Set Instrument Parameter Description Template Rev: 19890121 */
+/*                                                                            */
+/* Note:       This template shall be completed for any                       */
+/*             data set or instrument parameter description.                  */
+/*                                                                            */
+/* Hierarchy:   DSINSTPARMD                                                   */
+
+OBJECT                           = DSINSTPARMD
+  DATA_SET_OR_INSTRUMENT_PARM_NM   = "MAGNETIC FIELD COMPONENT"
+  DATA_SET_OR_INST_PARM_DESC       = "
+    A measured parameter equaling the magnetic field strength
+    (e.g. in nanoteslas) along a particular axis direction.  
+    Usually the three orthogonal axis components are measured by
+    three different sensors."
+END_OBJECT                       = DSINSTPARMD

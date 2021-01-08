@@ -1,0 +1,120 @@
+PDS_VERSION_ID                 = PDS3                                        
+LABEL_REVISION_NOTE            = "D. Kazden (PPI), 2011-10-10"               
+RECORD_TYPE                    = STREAM                                      
+                                                                             
+                                                                             
+OBJECT                         = REFERENCE                                   
+  REFERENCE_KEY_ID             = "ACUNAETAL1981A"                            
+  REFERENCE_DESC               = "                                           
+    Acuna, M.H., L.F. Burlaga, R.P. Lepping, and N.F. Ness,                  
+    Initial Results from the Voyager 1 and 2 Magnetic Field                  
+    Experiments, Proceedings of the Solar Wind IV Conference,                
+    Burghausen, 1978, H. Rosenbauer (Ed.), Max Planck Institut,              
+    Rept. No. MPAE-W-100-81-31, 1981."                                       
+END_OBJECT                     = REFERENCE                                   
+                                                                             
+OBJECT                         = REFERENCE                                   
+  REFERENCE_KEY_ID             = "BEHANNONETAL1977"                          
+  REFERENCE_DESC               = "                                           
+    Behannon, K.W., M.H. Acuna, L.F. Burlaga, R.P. Lepping, N.F.             
+    Ness, and F.M. Neubauer, Magnetic Field Experiment for Voyagers          
+    1 and 2, Space Sci. Rev., Vol. 21, p. 235, 1977."                        
+END_OBJECT                     = REFERENCE                                   
+                                                                             
+                                                                             
+OBJECT                         = REFERENCE                                   
+  REFERENCE_KEY_ID             = "JPLPD618-128"                              
+  REFERENCE_DESC               = "                                           
+    Voyager Neptune/Interstellar Mission: Flight Science Office              
+    Science and Mission Systems Handbook, JPL Project Document               
+    618-128, Jet Propulsion Laboratory, Pasadena, CA, 1987."                 
+END_OBJECT                     = REFERENCE                                   
+                                                                             
+OBJECT                         = REFERENCE                                   
+  REFERENCE_KEY_ID             = "KOHLHASE1989"                              
+  REFERENCE_DESC               = "                                           
+    Kohlhase, C., The Voyager Neptune Travel Guide, JPL Publication          
+    89-24, 276 pp., Jet Propulsion Laboratory, Pasadena, CA, 1989."          
+END_OBJECT                     = REFERENCE                                   
+                                                                             
+OBJECT                         = REFERENCE                                   
+  REFERENCE_KEY_ID             = "KOHLHASE&PENZO1977"                        
+  REFERENCE_DESC               = "                                           
+    Kohlhase, C.E. and P.A. Penzo, Voyager Mission Description,              
+    Space Sci. Rev., Vol. 21, pp. 77-101, 1977."                             
+END_OBJECT                     = REFERENCE                                   
+                                                                             
+OBJECT                         = REFERENCE                                   
+  REFERENCE_KEY_ID             = "MORRISON1982"                              
+  REFERENCE_DESC               = "                                           
+    Morrison, D., Voyages to Saturn, NASA SP-451, 227 pp., National          
+    Aeronautics and Space Administration, Washington, DC, 1982."             
+END_OBJECT                     = REFERENCE                                   
+                                                                             
+OBJECT                         = REFERENCE                                   
+  REFERENCE_KEY_ID             = "NESSETAL1971"                              
+  REFERENCE_DESC               = "                                           
+    Ness, N.F., K.W. Behannon, R.P. Lepping, and K.H. Schatten,              
+    Use of Two Magnetometers for Magnetic Field Measurements on a            
+    Spacecraft, J. Geophys. Res., Vol. 76, p. 3564, 1971."                   
+END_OBJECT                     = REFERENCE                                   
+                                                                             
+OBJECT                         = REFERENCE                                   
+  REFERENCE_KEY_ID             = "NESSETAL1979A"                             
+  REFERENCE_DESC               = "                                           
+    Ness, N.F., M.H. Acuna, R.P. Lepping, L.F. Burlaga, K.W. Behannon, and   
+    F.M. Neubauer, Magnetic Field Studies at Jupiter by Voyager 2:           
+    Preliminary Results, Science, Vol. 206, p. 966, 1979."                   
+END_OBJECT                    = REFERENCE                                    
+                                                                             
+OBJECT                         = REFERENCE                                   
+  REFERENCE_KEY_ID             = "NESSETAL1989"                              
+  REFERENCE_DESC               = "                                           
+    Ness, N.F., M.H. Acuna, L.F. Burlaga, J.E.P. Connerney, R.P. Lepping,    
+    and F.M. Neubauer, Magnetic Fields at Neptune, Science, 246, 1473-1478,  
+    1989."                                                                   
+END_OBJECT                     = REFERENCE                                   
+                                                                             
+OBJECT                         = REFERENCE                                   
+  REFERENCE_KEY_ID             = "STONE&LANE1979A"                           
+  REFERENCE_DESC               = "                                           
+    Stone, E.C., and A.L. Lane, The Voyager 1 Encounter with the             
+    Jovian System, Science, Vol. 204, p. 945, 1979."                         
+END_OBJECT                     = REFERENCE                                   
+                                                                             
+OBJECT                         = REFERENCE                                   
+  REFERENCE_KEY_ID             = "STONE&LANE1979B"                           
+  REFERENCE_DESC               = "                                           
+    Stone, E.C., and A.L. Lane, Voyager 2 Encounter with the Jovian          
+    System, Science, Vol. 206, p. 925, 1979."                                
+END_OBJECT                     = REFERENCE                                   
+                                                                             
+OBJECT                         = REFERENCE                                   
+  REFERENCE_KEY_ID             = "STONE&MINER1981"                           
+  REFERENCE_DESC               = "                                           
+    Stone, E.C., and E.D. Miner, Voyager 1 Encounter with the                
+    Saturnian System, Science, Vol. 212, p. 159, 1981."                      
+END_OBJECT                     = REFERENCE                                   
+                                                                             
+OBJECT                         = REFERENCE                                   
+  REFERENCE_KEY_ID             = "STONE&MINER1982"                           
+  REFERENCE_DESC               = "                                           
+    Stone, E.C., and E.D. Miner, Voyager 2 Encounter with the                
+    Saturnian System, Science, Vol. 215, p. 499, 1982."                      
+END_OBJECT                     = REFERENCE                                   
+                                                                             
+OBJECT                         = REFERENCE                                   
+  REFERENCE_KEY_ID             = "STONE&MINER1986"                           
+  REFERENCE_DESC               = "                                           
+    Stone, E.C., and E.D. Miner, The Voyager 2 Encounter with the            
+    Uranian System, Science, Vol. 233, p. 39, 1986."                         
+END_OBJECT                     = REFERENCE                                   
+                                                                             
+OBJECT                         = REFERENCE                                   
+  REFERENCE_KEY_ID             = "STONE&MINER1989"                           
+  REFERENCE_DESC               = "                                           
+    Stone, E.C., and E.D. Miner, The Voyager 2 Encounter with the            
+    Neptunian System, Science, Vol. 246, p. 1417, 1989."                     
+END_OBJECT                     = REFERENCE                                   
+END                                                                          
+

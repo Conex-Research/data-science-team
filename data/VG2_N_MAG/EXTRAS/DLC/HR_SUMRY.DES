@@ -1,0 +1,7 @@
+Data ID                         Data_ID                 A60  0
+Start                           Start                   T8   0
+Mode ID                         Mode                    A20  0
+Percent                         Percent                 R4   0
+Quality                         Quality                 I4   0
+Contam                          Contam                  I4   0
+NumGood                         NumGood                 I4   0

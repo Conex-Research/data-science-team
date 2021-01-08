@@ -1,0 +1,57 @@
+PDS_VERSION_ID                = PDS3
+DATA_SET_ID                   = {"VG2-J-MAG-4-RDR-HGCOORDS-1.92SEC-V1.0",
+                                 "VG2-J-MAG-4-RDR-HGCOORDS-9.60SEC-V1.0",
+                                 "VG2-J-MAG-4-RDR-S3COORDS-1.92SEC-V1.1",
+                                 "VG2-J-MAG-4-RDR-S3COORDS-9.60SEC-V1.1",
+                                 "VG2-J-MAG-4-SUMM-HGCOORDS-48.0SEC-V1.0",
+                                 "VG2-J-MAG-4-SUMM-S3COORDS-48.0SEC-V1.1",
+                                 "VG2-S-MAG-4-RDR-HGCOORDS-1.92SEC-V1.1",
+                                 "VG2-S-MAG-4-RDR-HGCOORDS-9.6SEC-V1.1",
+                                 "VG2-S-MAG-4-RDR-L1COORDS-1.92SEC-V1.1",
+                                 "VG2-S-MAG-4-RDR-L1COORDS-9.6SEC-V1.1",
+                                 "VG2-S-MAG-4-SUMM-HGCOORDS-48SEC-V1.1",
+                                 "VG2-S-MAG-4-SUMM-L1COORDS-48SEC-V1.1"
+                                 "VG2-N-MAG-4-RDR-HGCOORDS-1.92SEC-V1.0",
+                                 "VG2-N-MAG-4-RDR-HGCOORDS-9.6SEC-V1.0",
+                                 "VG2-N-MAG-4-SUMM-HGCOORDS-48SEC-V1.0",
+                                 "VG2-N-MAG-4-SUMM-NLSCOORDS-12SEC-V1.0",
+                                 "VG2-SW-MAG-4-SUMM-HGCOORDS-1HR-V1.0",
+                                 "VG2-SW-MAG-4-SUMM-HGCOORDS-48SEC-V1.0"
+                                 "VG2-U-MAG-4-RDR-HGCOORDS-1.92SEC-V1.0",
+                                 "VG2-U-MAG-4-RDR-HGCOORDS-9.6SEC-V1.0",
+                                 "VG2-U-MAG-4-RDR-U1COORDS-1.92SEC-V1.0",
+                                 "VG2-U-MAG-4-RDR-U1COORDS-9.6SEC-V1.0",
+                                 "VG2-U-MAG-4-SUMM-HGCOORDS-48SEC-V1.0",
+                                 "VG2-U-MAG-4-SUMM-U1COORDS-48SEC-V1.0"}
+RECORD_TYPE                   = STREAM
+^ASCII_DOCUMENT               = "MAGINST.ASC"
+^PDF_DOCUMENT                 = "MAGINST.PDF"
+PRODUCT_ID                    ="MAGINST"
+OBJECT                        = ASCII_DOCUMENT
+  DOCUMENT_NAME               = "Magnetic Field Experiment for Voyagers 1 
+and 2"
+  PUBLICATION_DATE            = 1977-12-01
+  DOCUMENT_TOPIC_TYPE         = "INVESTIGATION DESCRIPTION"
+  INTERCHANGE_FORMAT          = ASCII
+  DOCUMENT_FORMAT             = TEXT
+  DESCRIPTION                 = "
+    This file is an ASCII text version of the paper: Behannon, et
+    al., Magnetic Field Experiment for Voyagers 1 and 2, from Space
+    Sci. Rev., Vol. 21, No. 3, 1977, 235-257). It may be viewed using
+    a text viewer or editor."
+END_OBJECT                    = ASCII_DOCUMENT
+
+OBJECT                        = PDF_DOCUMENT
+  DOCUMENT_NAME               = "Magnetic Field Experiment for Voyagers 1 
+and 2."
+  PUBLICATION_DATE            = 1977-12-01
+  DOCUMENT_TOPIC_TYPE         = "INVESTIGATION DESCRIPTION"
+  INTERCHANGE_FORMAT          = BINARY
+  ENCODING_TYPE               = "PDF_ADOBE_1.6"
+  DOCUMENT_FORMAT             = "ADOBE_PDF"
+  DESCRIPTION                 = "
+    This file is a PDF version of the paper: Behannon, et al.,
+    Magnetic Field Experiment for Voyagers 1 and 2, from Space Sci.
+    Rev., Vol. 21, No. 3, 1977, 235-257)."
+END_OBJECT                    = PDF_DOCUMENT
+END

@@ -1,0 +1,942 @@
+/***************************  MAG Instrument **********************************/
+/* MODIFICATIONS
+/*	920813 -- EFRIED
+/*         Inserted values for INSTOPTICS, INSTRUMENT_MODE_DESC, REFERENCE_DESC,
+/*         and AUTHOR_FULL_NAME
+/*	920916 -- EFRIED
+/*         last changes made
+
+/* Template: Spacecraft Instrument Template - Rev: 19890121
+/* Note:       The following templates form part of a standard
+/*             set for the submission of a spacecraft instrument
+/*             to the PDS.
+/*
+/* Hierarchy:   SCINSTRUMENT
+/*                 INSTINFO
+/*                 INSTDETECT
+/*                 INSTELEC
+/*                 INSTFILTER
+/*                 INSTOPTICS
+/*                 SCINSTOFFSET
+/*                 INSTSECTION
+/*                    INSTSECTINFO
+/*                       INSTSECTFOVS
+/*                    INSTSECTPARM
+/*                    INSTSECTDET
+/*                    INSTSECTELEC
+/*                    INSTSECTFILT
+/*                    INSTSECTOPTC
+/*                 INSTMODEINFO
+/*                    INSTMODESECT
+/*                 INSTREFINFO
+/*                    REFERENCE
+/*                       REFAUTHORS
+/*
+
+OBJECT                        = SCINSTRUMENT
+  SPACECRAFT_ID                 = "VG2"
+  INSTRUMENT_ID                 = "MAG"
+
+  OBJECT                        = INSTINFO
+    INSTRUMENT_NAME               = "TRIAXIAL FLUXGATE MAGNETOMETER"
+    INSTRUMENT_TYPE               = "MAGNETOMETER"
+    PI_PDS_USER_ID                = "NNESS"
+    NAIF_DATA_SET_ID              = "N/A"
+    BUILD_DATE                    = 1977-08-20
+    INSTRUMENT_MASS               = 5.600000
+    INSTRUMENT_HEIGHT             = "UNK"
+    INSTRUMENT_LENGTH             = 13.000000
+    INSTRUMENT_WIDTH              = "UNK"
+    INSTRUMENT_MANUFACTURER_NAME  = "UNK"
+    INSTRUMENT_SERIAL_NUMBER      = "UNK"
+    INSTRUMENT_DESC               = "
+          The magnetic field experiment carried out on the Voyager 2
+          mission consists of dual low field (LFM) and high field
+          magnetometer (HFM) systems. The dual systems provide
+          greater reliability and, in the case of the LFM's, permit
+          the separation of the spacecraft magnetic fields from the
+          ambient fields. Additional reliability is achieved through
+          electronics redundancy. The wide dynamic ranges of +/-
+          0.002 G for the LFM's and +/- 20G for the HFM's, low
+          quantization uncertainty (+/- 12.4, 488 nanotesla
+          respectively), low sensor RMS noise level (0.006
+          nanotesla), and the use of data compaction schemes to
+          optimize the experiment information rate all combine to
+          permit the study of a broad spectrum of phenomena during
+          the mission."
+    SCIENTIFIC_OBJECTIVES_SUMMARY = "
+          The investigations of the magnetic fields and
+          magnetospheres of the major planetary systems in the outer
+          Solar System and their interactions with the solar wind are
+          primary objectives of the space exploration program to be
+          conducted during the Voyager 2 mission. In addition, the
+          investigation of the interplanetary magnetic field
+          phenomena during the flights is of fundamental importance
+          both to the understanding of the magnetospheric
+          observations and to a number of outstanding questions in
+          basic plasma physics and in the general dynamics of the
+          solar wind. If the Heliospheric boundary is penetrated,
+          accurate measurement of the interstellar magnetic field is
+          also an important objective."
+    INSTRUMENT_CALIBRATION_DESC   = "
+          The 13 meter Astromast booms have proved in extensive
+          pre-flight testing to be highly rigid with respect to
+          bending motions but soft to torsional or twisting motion.
+          Deployment repeatability tests have shown as much as +/- 7
+          degrees uncertainty in the knowledge of the boom twist
+          angle (about the boom axis) at the magnetometer sensor
+          positions, compared with +/- 0.5 uncertainty in bend angles
+          (rotation about axes orthogonal to the boom axis). In order
+          to minimize sensor alignment uncertainties, a method to
+          estimate an angular correction matrix was developed that
+          eliminates most of the twist uncertainty and some of the
+          bend uncertainty. A special calibration coil has been wound
+          around the periphery of the spacecrafts high gain antenna
+          to generate, upon command, a known magnetic field at both
+          LFM magnetometer sensors. The difference between
+          measurements taken when the coil is turned on and off is
+          the coil field, independent of all external fields. Using a
+          20 turn coil of 1/2 amp yields nominal field intensities 0f
+          33.4 and 6.1 nanotesla at the inboard and outboard sensors,
+          respectively. All magnetometer data are calibrated. Three
+          types of in-flight calibrations are performed: 1)
+          sensitivity calibrations, 2) zero-level calibrations, based
+          on rolls of the spacecraft, and 3) boom-alignment
+          calibrations based on the activation of on-board coils and
+          resulting data (especially important when dual
+          magnetometers are used and in strong fields for any
+          magnetometer). Sensitivity calibrations (for 8 ranges) are
+          done approximately once every two months (early in the
+          mission they were done more frequently). The magnetometer
+          team generally use one or two axis rolls (cruise maneuvers,
+          CRSMR's) of the spacecraft for zero level calibrations as
+          often as they are provided which is variable
+          this is about three times per year for the so-called
+          mini-CRSMR's, which are two axis rolls. Full CRSMR's and
+          z-axis (only) roll-maneuvers have not occurred within the
+          last few years (full CRSMR's and mini's differ only in the
+          number of rolls in each). The magnetometer team usually
+          succeeds in arguing for a series of rolls near each
+          planetary encounter. Boom-alignment calibrations were done
+          once after launch and around the time of the Jupiter
+          encounter. Others have been executed, but it has been
+          determined that the inter-sensor misalignment is small and
+          constant. For more information, consult Behannon et
+          al, Space Science Reviews, 1977 volume 21 pages 235-257."
+    OPERATIONAL_CONSID_DESC       = "
+          There are no special operational considerations for the
+          magnetometer described in Behannon et al, Space Science
+          Reviews, 21 (1977). All magnetometer data are calibrated.
+          Three types of in-flight calibrations are performed: 1)
+          sensitivity calibrations, 2) zero-level calibrations, based
+          on rolls of the spacecraft, and 3) boom-alignment
+          calibrations based on the activation of on-board coils and
+          resulting data (especially important when dual
+          magnetometers are used and in strong fields for any
+          magnetometer). Sensitivity calibrations (for 8 ranges) are
+          done approximately once every two months (early in the
+          mission they were done more frequently). The magnetometer
+          team generally use one or two axis rolls (cruise maneuvers,
+          CRSMR's) of the spacecraft for zero level calibrations as
+          often as they are provided which is variable
+          this is about three times per year for the so-called
+          mini-CRSMR's, which are two axis rolls. Full CRSMR's and
+          z-axis (only) roll-maneuvers have not occurred within the
+          last few years (full CRSMR's and mini's differ only in the
+          number of rolls in each). The magnetometer team usually
+          succeeds in arguing for a series of rolls near each
+          planetary encounter. Boom-alignment calibrations were done
+          once after launch and around the time of the Jupiter
+          encounter. Others have been executed, but it has been
+          determined that the inter-sensor misalignment is small and
+          constant."
+  END_OBJECT                    = INSTINFO
+
+  OBJECT                        = INSTDETECT
+    DETECTOR_ID                   = "HFM1"
+    DETECTOR_TYPE                 = "RING CORE"
+    DETECTOR_ASPECT_RATIO         = 0.000000
+    MINIMUM_WAVELENGTH            = "N/A"
+    MAXIMUM_WAVELENGTH            = "N/A"
+    NOMINAL_OPERATING_TEMPERATURE = 273.000000
+    DETECTOR_DESC                 = "
+          Both high and low field magnetometer sensors utilize a ring
+          core geometry and thus have lower drive power requirements
+          and better zero level stability than other types of
+          fluxgates and are smaller in size (Acuna, 1974). The cores
+          consist of an advanced molybdenum alloy, especially
+          developed in cooperation with the Naval Surface Weapons
+          Center, White Oak, Maryland, which exhibits extremely low
+          noise and high stability characteristics. The use of this
+          alloy and the ring core sensor geometry thus allows the
+          realization of compact, low power, ultrastable fluxgate
+          sensors with a noise performance that is improved almost an
+          order of magnitude over the best previously flown fluxgate
+          sensors. The HFM's use specially processed miniature ring
+          cores (1cm diameter) which minimize the power required to
+          measure large fields. This description is taken directly
+          from Behannon et al, Space Science Reviews (1977). The HFM1
+          detector is designated as the detector which measures the i
+          component of the vector (i, j, k)."
+    SENSITIVITY_DESC            ="N/A"
+  END_OBJECT                    = INSTDETECT
+
+  OBJECT                        = INSTDETECT
+    DETECTOR_ID                   = "HFM2"
+    DETECTOR_TYPE                 = "RING CORE"
+    DETECTOR_ASPECT_RATIO         = 0.000000
+    MINIMUM_WAVELENGTH            = "N/A"
+    MAXIMUM_WAVELENGTH            = "N/A"
+    NOMINAL_OPERATING_TEMPERATURE = 273.000000
+    DETECTOR_DESC                 = "
+          Both high and low field magnetometer sensors utilize a ring
+          core geometry and thus have lower drive power requirements
+          and better zero level stability than other types of
+          fluxgates and are smaller in size (Acuna, 1974). The cores
+          consist of an advanced molybdenum alloy, especially
+          developed in cooperation with the Naval Surface Weapons
+          Center, White Oak, Maryland, which exhibits extremely low
+          noise and high stability characteristics. The use of this
+          alloy and the ring core sensor geometry thus allows the
+          realization of compact, low power, ultrastable fluxgate
+          sensors with a noise performance that is improved almost an
+          order of magnitude over the best previously flown fluxgate
+          sensors. The HFM's use specially processed miniature ring
+          cores (1cm diameter) which minimize the power required to
+          measure large fields. This description is taken directly
+          from Behannon et al, Space Science Reviews (1977). The HFM2
+          detector is designated as the detector which measures the j
+          component of the vector (i,j,k)."
+    SENSITIVITY_DESC            = "N/A"
+  END_OBJECT                    = INSTDETECT
+
+  OBJECT                        = INSTDETECT
+    DETECTOR_ID                   = "HFM3"
+    DETECTOR_TYPE                 = "RING CORE"
+    DETECTOR_ASPECT_RATIO         = 0.000000
+    MINIMUM_WAVELENGTH            = "N/A"
+    MAXIMUM_WAVELENGTH            = "N/A"
+    NOMINAL_OPERATING_TEMPERATURE = 273.000000
+    DETECTOR_DESC                 = "
+          Both high and low field magnetometer sensors utilize a ring
+          core geometry and thus have lower drive power requirements
+          and better zero level stability than other types of
+          fluxgates and are smaller in size (Acuna, 1974). The cores
+          consist of an advanced molybdenum alloy, especially
+          developed in cooperation with the Naval Surface Weapons
+          Center, White Oak, Maryland, which exhibits extremely low
+          noise and high stability characteristics. The use of this
+          alloy and the ring core sensor geometry thus allows the
+          realization of compact, low power, ultrastable fluxgate
+          sensors with a noise performance that is improved almost an
+          order of magnitude over the best previously flown fluxgate
+          sensors. The HFM's use specially processed miniature ring
+          cores (1cm diameter) which minimize the power required to
+          measure large fields. This description is taken directly
+          from Behannon et al, Space Science Reviews (1977). The HFM3
+          detector is designated as the detector which measures the k
+          component of the vector (i,j,k)."
+    SENSITIVITY_DESC            = "N/A"
+  END_OBJECT                    = INSTDETECT
+
+  OBJECT                        = INSTDETECT
+    DETECTOR_ID                   = "LFM1"
+    DETECTOR_TYPE                 = "RING CORE"
+    DETECTOR_ASPECT_RATIO         = 0.000000
+    MINIMUM_WAVELENGTH            = "N/A"
+    MAXIMUM_WAVELENGTH            = "N/A"
+    NOMINAL_OPERATING_TEMPERATURE = 273.000000
+    DETECTOR_DESC                 = "
+          Both high and low field magnetometer sensors utilize a ring
+          core geometry and thus have lower drive power requirements
+          and better zero level stability than other types of
+          fluxgates and are smaller in size (Acuna, 1974). The cores
+          consist of an advanced molybdenum alloy, especially
+          developed in cooperation with the Naval Surface Weapons
+          Center, White Oak, Maryland, which exhibits extremely low
+          noise and high stability characteristics. The use of this
+          alloy and the ring core sensor geometry thus allows the
+          realization of compact, low power, ultrastable fluxgate
+          sensors with a noise performance that is improved almost an
+          order of magnitude over the best previously flown fluxgate
+          sensors. The HFM's use specially processed miniature ring
+          cores (1cm diameter) which minimize the power required to
+          measure large fields. This description is taken directly
+          from Behannon et al, Space Science Reviews (1977). The LFM1
+          detector is designated as the detector which measures the i
+          component of the vector (i,j,k)."
+    SENSITIVITY_DESC            = "N/A"
+  END_OBJECT                    = INSTDETECT
+
+  OBJECT                        = INSTDETECT
+    DETECTOR_ID                   = "LFM2"
+    DETECTOR_TYPE                 = "RING CORE"
+    DETECTOR_ASPECT_RATIO         = 0.000000
+    MINIMUM_WAVELENGTH            = "N/A"
+    MAXIMUM_WAVELENGTH            = "N/A"
+    NOMINAL_OPERATING_TEMPERATURE = 273.000000
+    DETECTOR_DESC                 = "
+          Both high and low field magnetometer sensors utilize a ring
+          core geometry and thus have lower drive power requirements
+          and better zero level stability than other types of
+          fluxgates and are smaller in size (Acuna, 1974). The cores
+          consist of an advanced molybdenum alloy, especially
+          developed in cooperation with the Naval Surface Weapons
+          Center, White Oak, Maryland, which exhibits extremely low
+          noise and high stability characteristics. The use of this
+          alloy and the ring core sensor geometry thus allows the
+          realization of compact, low power, ultrastable fluxgate
+          sensors with a noise performance that is improved almost an
+          order of magnitude over the best previously flown fluxgate
+          sensors. The HFM's use specially processed miniature ring
+          cores (1cm diameter) which minimize the power required to
+          measure large fields. This description is taken directly
+          from Behannon et al, Space Science Reviews (1977). The LFM2
+          detector is designated as the detector which measures the j
+          component of the vector (i,j,k)."
+    SENSITIVITY_DESC            = "N/A"
+  END_OBJECT                    = INSTDETECT
+
+  OBJECT                        = INSTDETECT
+    DETECTOR_ID                   = "LFM3"
+    DETECTOR_TYPE                 = "RING CORE"
+    DETECTOR_ASPECT_RATIO         = 0.000000
+    MINIMUM_WAVELENGTH            = "N/A"
+    MAXIMUM_WAVELENGTH            = "N/A"
+    NOMINAL_OPERATING_TEMPERATURE = 273.000000
+    DETECTOR_DESC                 = "
+          Both high and low field magnetometer sensors utilize a ring
+          core geometry and thus have lower drive power requirements
+          and better zero level stability than other types of
+          fluxgates and are smaller in size (Acuna, 1974). The cores
+          consist of an advanced molybdenum alloy, especially
+          developed in cooperation with the Naval Surface Weapons
+          Center, White Oak, Maryland, which exhibits extremely low
+          noise and high stability characteristics. The use of this
+          alloy and the ring core sensor geometry thus allows the
+          realization of compact, low power, ultrastable fluxgate
+          sensors with a noise performance that is improved almost an
+          order of magnitude over the best previously flown fluxgate
+          sensors. The HFM's use specially processed miniature ring
+          cores (1cm diameter) which minimize the power required to
+          measure large fields. This description is taken directly
+          from Behannon et al, Space Science Reviews (1977). The LFM3
+          detector is designated as the detector which measures the k
+          component of the vector (i,j,k)."
+    SENSITIVITY_DESC            = "N/A"
+  END_OBJECT                    = INSTDETECT
+
+  OBJECT                        = INSTELEC
+    ELECTRONICS_ID                = "P"
+    ELECTRONICS_DESC              = "
+          P - primary system. The experiment electronics
+          instrumentation consists of the flux-gate magnetometer
+          electronics and associated controls, and the calibration
+          and data processing electronics. Complete redundancy is
+          provided for the analog to digital converters, data and
+          status readout buffers, command decoders and power
+          converters. Thus not only can the two magnetometers of a
+          system be interchanged, but considerable cross-strapping
+          within the electronics permits interchange of critical
+          internal functions as well. This significantly reduces the
+          impact of single-component failure on the ability of the
+          experiment to continue successful operation during the
+          mission duration of > 4 years. This description is directly
+          transposed from Behannon et al, Space Science Reviews, 21
+          (1977) page 249."
+  END_OBJECT                    = INSTELEC
+
+  OBJECT                        = INSTELEC
+    ELECTRONICS_ID                = "S"
+    ELECTRONICS_DESC              = "
+          S - secondary system. The experiment electronics
+          instrumentation consists of the flux-gate magnetometer
+          electronics and associated controls, and the calibration
+          and data processing electronics. Complete redundancy is
+          provided for the analog to digital converters, data and
+          status readout buffers, command decoders and power
+          converters. Thus not only can the two magnetometers of a
+          system be interchanged, but considerable cross-strapping
+          within the electronics permits interchange of critical
+          internal functions as well. This significantly reduces the
+          impact of single-component failure on the ability of the
+          experiment to continue successful operation during the
+          mission duration of > 4 years. This description is directly
+          transposed from Behannon et al, Space Science Reviews, 21
+          (1977) page 249."
+  END_OBJECT                    = INSTELEC
+
+  OBJECT                        = INSTFILTER
+    FILTER_NUMBER                 = "N/A"
+    FILTER_NAME                   = "N/A"
+    FILTER_TYPE                   = "N/A"
+    MINIMUM_WAVELENGTH            = "N/A"
+    CENTER_FILTER_WAVELENGTH      = "N/A"
+    MAXIMUM_WAVELENGTH            = "N/A"
+    MEASUREMENT_WAVE_CALBRT_DESC  = "N/A"
+  END_OBJECT                    = INSTFILTER
+
+  OBJECT                        = INSTOPTICS
+    TELESCOPE_ID                = "N/A"
+    TELESCOPE_FOCAL_LENGTH      = "N/A"
+    TELESCOPE_DIAMETER          = "N/A"
+    TELESCOPE_F_NUMBER          = "N/A"
+    TELESCOPE_RESOLUTION        = "N/A"
+    TELESCOPE_TRANSMITTANCE     = "N/A"
+    TELESCOPE_T_NUMBER          = "N/A"
+    TELESCOPE_T_NUMBER_ERROR    = "N/A"
+    TELESCOPE_SERIAL_NUMBER     = "N/A"
+    OPTICS_DESC                 = "N/A"
+  END_OBJECT                    = INSTOPTICS
+
+  OBJECT                        = SCINSTOFFSET
+    PLATFORM_OR_MOUNTING_NAME     = "MAGNETOMETER BOOM"
+    CONE_OFFSET_ANGLE             = "N/A"
+    CROSS_CONE_OFFSET_ANGLE       = "N/A"
+    TWIST_OFFSET_ANGLE            = "N/A"
+    INSTRUMENT_MOUNTING_DESC      = "
+          The LFM is located near the tip of the boom and the HFM is
+          located near the spacecraft body. See Behannon et al, 1977
+          for a picture of the actual magnetometer mounting positions
+          and a complete description."
+  END_OBJECT                    = SCINSTOFFSET
+
+  OBJECT                        = INSTSECTION
+    SECTION_ID                    = "HFM"
+
+    OBJECT                        = INSTSECTINFO
+      SCAN_MODE_ID                  = "N/A"
+      DATA_RATE                     = "UNK"
+      SAMPLE_BITS                   = 12
+      TOTAL_FOVS                    = 1
+
+      OBJECT                        = INSTSECTFOVS
+        FOV_SHAPE_NAME                = "N/A"
+        HORIZONTAL_PIXEL_FOV          = "N/A"
+        VERTICAL_PIXEL_FOV            = "N/A"
+        HORIZONTAL_FOV                = "N/A"
+        VERTICAL_FOV                  = "N/A"
+        FOVS                          = 1
+      END_OBJECT                    = INSTSECTFOVS
+    END_OBJECT                    = INSTSECTINFO
+
+    OBJECT                        = INSTSECTPARM
+      INSTRUMENT_PARAMETER_NAME     = "MAGNETIC FIELD COMPONENT"
+      MINIMUM_INSTRUMENT_PARAMETER  = -2000000.000000
+      MAXIMUM_INSTRUMENT_PARAMETER  = 2000000.000000
+      NOISE_LEVEL                   = 0.006000
+      INSTRUMENT_PARAMETER_UNIT     = "NANOTESLA"
+      SAMPLING_PARAMETER_NAME       = "TIME"
+      MINIMUM_SAMPLING_PARAMETER    = 0.600000
+      MAXIMUM_SAMPLING_PARAMETER    = 0.600000
+      SAMPLING_PARAMETER_INTERVAL   = 0.600000
+      SAMPLING_PARAMETER_RESOLUTION = 0.600000
+      SAMPLING_PARAMETER_UNIT       = "SECOND"
+    END_OBJECT                    = INSTSECTPARM
+
+    OBJECT                        = INSTSECTDET
+      DETECTOR_ID                   = "HFM1"
+    END_OBJECT                    = INSTSECTDET
+
+    OBJECT                        = INSTSECTDET
+      DETECTOR_ID                   = "HFM2"
+    END_OBJECT                    = INSTSECTDET
+
+    OBJECT                        = INSTSECTDET
+      DETECTOR_ID                   = "HFM3"
+    END_OBJECT                    = INSTSECTDET
+
+    OBJECT                        = INSTSECTELEC
+      ELECTRONICS_ID                = "P"
+    END_OBJECT                    = INSTSECTELEC
+
+    OBJECT                        = INSTSECTELEC
+      ELECTRONICS_ID                = "S"
+    END_OBJECT                    = INSTSECTELEC
+
+    OBJECT                        = INSTSECTFILT
+      FILTER_NUMBER                 = "HFM1"
+    END_OBJECT                    = INSTSECTFILT
+
+    OBJECT                        = INSTSECTOPTC
+      TELESCOPE_ID                  = "N/A"
+    END_OBJECT                    = INSTSECTOPTC
+  END_OBJECT                    = INSTSECTION
+
+  OBJECT                        = INSTSECTION
+    SECTION_ID                    = "LFM"
+
+    OBJECT                        = INSTSECTINFO
+      SCAN_MODE_ID                  = "N/A"
+      DATA_RATE                     = "UNK"
+      SAMPLE_BITS                   = 12
+      TOTAL_FOVS                    = 1
+
+      OBJECT                        = INSTSECTFOVS
+        FOV_SHAPE_NAME                = "N/A"
+        HORIZONTAL_PIXEL_FOV          = "N/A"
+        VERTICAL_PIXEL_FOV            = "N/A"
+        HORIZONTAL_FOV                = "N/A"
+        VERTICAL_FOV                  = "N/A"
+        FOVS                          = 1
+      END_OBJECT                    = INSTSECTFOVS
+    END_OBJECT                    = INSTSECTINFO
+
+    OBJECT                        = INSTSECTPARM
+      INSTRUMENT_PARAMETER_NAME     = "MAGNETIC FIELD COMPONENT"
+      MINIMUM_INSTRUMENT_PARAMETER  = -50000.000000
+      MAXIMUM_INSTRUMENT_PARAMETER  = 50000.000000
+      NOISE_LEVEL                   = 0.006000
+      INSTRUMENT_PARAMETER_UNIT     = "NANOTESLA"
+      SAMPLING_PARAMETER_NAME       = "TIME"
+      MINIMUM_SAMPLING_PARAMETER    = 0.060000
+      MAXIMUM_SAMPLING_PARAMETER    = 0.060000
+      SAMPLING_PARAMETER_INTERVAL   = 0.060000
+      SAMPLING_PARAMETER_RESOLUTION = 0.060000
+      SAMPLING_PARAMETER_UNIT       = "SECOND"
+    END_OBJECT                    = INSTSECTPARM
+
+    OBJECT                        = INSTSECTDET
+      DETECTOR_ID                   = "LFM1"
+    END_OBJECT                    = INSTSECTDET
+
+    OBJECT                        = INSTSECTDET
+      DETECTOR_ID                   = "LFM2"
+    END_OBJECT                    = INSTSECTDET
+
+    OBJECT                        = INSTSECTDET
+      DETECTOR_ID                   = "LFM3"
+    END_OBJECT                    = INSTSECTDET
+
+    OBJECT                        = INSTSECTELEC
+      ELECTRONICS_ID                = "P"
+    END_OBJECT                    = INSTSECTELEC
+
+    OBJECT                        = INSTSECTELEC
+      ELECTRONICS_ID                = "S"
+    END_OBJECT                    = INSTSECTELEC
+
+    OBJECT                        = INSTSECTFILT
+      FILTER_NUMBER                 = "LFM1"
+    END_OBJECT                    = INSTSECTFILT
+
+    OBJECT                        = INSTSECTOPTC
+      TELESCOPE_ID                  = "N/A"
+    END_OBJECT                    = INSTSECTOPTC
+  END_OBJECT                    = INSTSECTION
+
+  OBJECT                        = INSTMODEINFO
+    INSTRUMENT_MODE_ID            = "CRUISE"
+    GAIN_MODE_ID                  = "N/A"
+    DATA_PATH_TYPE                = "REALTIME"
+    INSTRUMENT_POWER_CONSUMPTION  = 2.200000
+    INSTRUMENT_MODE_DESC           = "
+         In the CRUISE mode, only the  LFM subsystem is operating.     
+         The basic sample rate in this mode is 50/3 vectors/second."
+
+    OBJECT                        = INSTMODESECT
+      SECTION_ID                    = "LFM"
+    END_OBJECT                    = INSTMODESECT
+  END_OBJECT                    = INSTMODEINFO
+
+  OBJECT                        = INSTMODEINFO
+    INSTRUMENT_MODE_ID            = "ENCOUNTER"
+    GAIN_MODE_ID                  = "N/A"
+    DATA_PATH_TYPE                = "REALTIME"
+    INSTRUMENT_POWER_CONSUMPTION  = 2.200000
+    INSTRUMENT_MODE_DESC          = "
+ In the ENCOUNTER mode, both LFM and HFM subsystems are       
+ operating. The basic sample rate in this mode is 50/3        
+ vectors/second for the LFM system and 5/3 vectors/second     
+ for the HFM system."
+
+    OBJECT                        = INSTMODESECT
+      SECTION_ID                    = "HFM"
+    END_OBJECT                    = INSTMODESECT
+
+    OBJECT                        = INSTMODESECT
+      SECTION_ID                    = "LFM"
+    END_OBJECT                    = INSTMODESECT
+  END_OBJECT                    = INSTMODEINFO
+
+  OBJECT                        = INSTREFINFO
+    REFERENCE_KEY_ID              = "ACUNAETAL1983"
+
+    OBJECT                        = REFERENCE
+      DOCUMENT_TOPIC_TYPE           = "Z3 ZONAL HARMONIC MODEL SATURN'S 
+                                       MAGNETIC FIELD ANALYSIS"
+      JOURNAL_NAME                  = "JOURNAL OF GEOPHYSICAL RESEARCH"
+      PUBLICATION_DATE              = 1983
+      REFERENCE_DESC                = "
+         Acuna, M. H., J. E. P. Connerney, and N. F. Ness, The Z3     
+         Zonal Harmonic Model of Saturn's Magnetic Field: Analysis    
+         and Implications, J. Geophys. Res., 88, 8771, 1983."          
+
+      OBJECT                        = REFAUTHORS
+        AUTHOR_FULL_NAME              = "J.E.P. CONNERNEY"
+      END_OBJECT                    = REFAUTHORS
+
+      OBJECT                        = REFAUTHORS
+        AUTHOR_FULL_NAME              = "M.H. ACUNA"
+      END_OBJECT                    = REFAUTHORS
+
+      OBJECT                        = REFAUTHORS
+        AUTHOR_FULL_NAME              = "N.F. NESS"
+      END_OBJECT                    = REFAUTHORS
+    END_OBJECT                    = REFERENCE
+  END_OBJECT                    = INSTREFINFO
+
+  OBJECT                        = INSTREFINFO
+    REFERENCE_KEY_ID              = "BEHANNONETAL1977"
+
+    OBJECT                        = REFERENCE
+      DOCUMENT_TOPIC_TYPE           = "MAGNETIC FIELD EXPERIMENT FOR 
+                                       VOYAGER 1 AND 2"
+      JOURNAL_NAME                  = "SPACE SCIENCE REVIEWS"
+      PUBLICATION_DATE              = 1977
+      REFERENCE_DESC                = "
+         Behannon K. W., M. H. Acuna, L. F. Burlaga, R. P. Lepping,   
+         N. F. Ness, and F. M. Neubauer, Magnetic Field Experiment    
+         for Voyagers 1 and 2, Space Science Reviews, 21, 235, 1977."
+
+      OBJECT                        = REFAUTHORS
+        AUTHOR_FULL_NAME              = "N.F. NESS"
+      END_OBJECT                    = REFAUTHORS
+
+      OBJECT                        = REFAUTHORS
+        AUTHOR_FULL_NAME              = "F.M. NEUBAUER"
+      END_OBJECT                    = REFAUTHORS
+
+      OBJECT                        = REFAUTHORS
+        AUTHOR_FULL_NAME              = "K.W. BEHANNON"
+      END_OBJECT                    = REFAUTHORS
+
+      OBJECT                        = REFAUTHORS
+        AUTHOR_FULL_NAME              = "L.F. BURLAGA"
+      END_OBJECT                    = REFAUTHORS
+ 
+      OBJECT                        = REFAUTHORS
+        AUTHOR_FULL_NAME              = "M.H. ACUNA"
+      END_OBJECT                    = REFAUTHORS
+
+      OBJECT                        = REFAUTHORS
+        AUTHOR_FULL_NAME              = "R.P. LEPPING"
+      END_OBJECT                    = REFAUTHORS
+    END_OBJECT                    = REFERENCE
+  END_OBJECT                    = INSTREFINFO
+
+  OBJECT                        = INSTREFINFO
+    REFERENCE_KEY_ID              = "BEHANNONETAL1981"
+
+    OBJECT                        = REFERENCE
+      DOCUMENT_TOPIC_TYPE           = "JOVIAN MAGNETOTAIL AND CURRENT SHEET"
+      JOURNAL_NAME                  = "JOURNAL OF GEOPHYSICAL RESEARCH"
+      PUBLICATION_DATE              = 1981
+      REFERENCE_DESC                = "
+         Behannon, K. W., L. F. Burlaga, and N. F. Ness, The Jovian   
+         Magnetotail and its Current Sheet, J. Geophys. Res., 86,     
+         8385, 1981."                   
+
+      OBJECT                        = REFAUTHORS
+        AUTHOR_FULL_NAME              = "K.W. BEHANNON"
+      END_OBJECT                    = REFAUTHORS
+ 
+      OBJECT                        = REFAUTHORS
+        AUTHOR_FULL_NAME              = "L.F. BURLAGA"
+      END_OBJECT                    = REFAUTHORS
+ 
+      OBJECT                        = REFAUTHORS
+        AUTHOR_FULL_NAME              = "N.F. NESS"
+      END_OBJECT                    = REFAUTHORS
+    END_OBJECT                    = REFERENCE
+  END_OBJECT                    = INSTREFINFO
+
+  OBJECT                        = INSTREFINFO
+    REFERENCE_KEY_ID              = "BEHANNONETAL1983"
+
+    OBJECT                        = REFERENCE
+      DOCUMENT_TOPIC_TYPE           = "STRUCTURE DYNAMICS SATURN'S 
+                                       OUTER MAGNETOSPHERE BOUNDARY"
+      JOURNAL_NAME                  = "JOURNAL OF GEOPHYSICAL RESEARCH"
+      PUBLICATION_DATE              = 1983
+      REFERENCE_DESC                = "
+         Behannon, K. W., R. P. Lepping, and N. F. Ness, Structure    
+         and Dynamics of Saturn's Outer Magnetosphere and Boundary    
+         Regions, J. Geophys. Res., 88, 8791, 1983."
+
+      OBJECT                        = REFAUTHORS
+        AUTHOR_FULL_NAME              = "K.W. BEHANNON"
+      END_OBJECT                    = REFAUTHORS
+
+      OBJECT                        = REFAUTHORS
+        AUTHOR_FULL_NAME              = "N.F. NESS"
+      END_OBJECT                    = REFAUTHORS
+ 
+      OBJECT                        = REFAUTHORS
+        AUTHOR_FULL_NAME              = "R.P. LEPPING"
+      END_OBJECT                    = REFAUTHORS
+    END_OBJECT                    = REFERENCE
+  END_OBJECT                    = INSTREFINFO
+
+  OBJECT                        = INSTREFINFO
+    REFERENCE_KEY_ID              = "BEHANNONETAL1986"
+
+    OBJECT                        = REFERENCE
+      DOCUMENT_TOPIC_TYPE           = "MAGNETOTAIL URANUS"
+      JOURNAL_NAME                  = "JOURNAL OF GEOPHYSICAL RESEARCH"
+      PUBLICATION_DATE              = 1986
+      REFERENCE_DESC                = "
+         Behannon, K. W., et al, The Magnetotail of Uranus, J.        
+         Geophys. Res., 92, 366, 1986."
+
+      OBJECT                        = REFAUTHORS
+        AUTHOR_FULL_NAME              = "K.W. BEHANNON"
+      END_OBJECT                    = REFAUTHORS
+    END_OBJECT                    = REFERENCE
+  END_OBJECT                    = INSTREFINFO
+
+  OBJECT                        = INSTREFINFO
+    REFERENCE_KEY_ID              = "CONNERNEYETAL1981"
+
+    OBJECT                        = REFERENCE
+      DOCUMENT_TOPIC_TYPE           = "MODELING JOVIAN CURRENT SHEET 
+                                       AND INNER MAGNETOSPHERE"
+      JOURNAL_NAME                  = "JOURNAL OF GEOPHYSICAL RESEARCH"
+      PUBLICATION_DATE              = 1981
+      REFERENCE_DESC                = "
+         Connerney, J. E. P., M. H. Acuna, and N. F. Ness, Modeling   
+         of the Jovian Current Sheet and Inner Magnetosphere, J.      
+         Geophys Res., 86, 8370, 1981."
+
+      OBJECT                        = REFAUTHORS
+        AUTHOR_FULL_NAME              = "J.E.P. CONNERNEY"
+      END_OBJECT                    = REFAUTHORS
+
+      OBJECT                        = REFAUTHORS
+        AUTHOR_FULL_NAME              = "M.H. ACUNA"
+      END_OBJECT                    = REFAUTHORS
+
+      OBJECT                        = REFAUTHORS
+        AUTHOR_FULL_NAME              = "N.F. NESS"
+      END_OBJECT                    = REFAUTHORS
+    END_OBJECT                    = REFERENCE
+  END_OBJECT                    = INSTREFINFO
+
+  OBJECT                        = INSTREFINFO
+    REFERENCE_KEY_ID              = "CONNERNEYETAL1983"
+
+    OBJECT                        = REFERENCE
+      DOCUMENT_TOPIC_TYPE           = "CURRENTS IN SATURN'S MAGNETOSPHERE"
+      JOURNAL_NAME                  = "JOURNAL OF GEOPHYSICAL RESEARCH"
+      PUBLICATION_DATE              = 1983
+      REFERENCE_DESC                = "
+         Connerney, J. E. P., M. H. Acuna, and N. F. Ness, Currents
+         in Saturn's Magnetosphere, J. Geophys. Res., 88, 8779,
+         1983."
+
+      OBJECT                        = REFAUTHORS
+        AUTHOR_FULL_NAME              = "J.E.P. CONNERNEY"
+      END_OBJECT                    = REFAUTHORS
+
+      OBJECT                        = REFAUTHORS
+        AUTHOR_FULL_NAME              = "M.H. ACUNA"
+      END_OBJECT                    = REFAUTHORS
+
+      OBJECT                        = REFAUTHORS
+        AUTHOR_FULL_NAME              = "N.F. NESS"
+      END_OBJECT                    = REFAUTHORS
+    END_OBJECT                    = REFERENCE
+  END_OBJECT                    = INSTREFINFO
+
+  OBJECT                        = INSTREFINFO
+    REFERENCE_KEY_ID              = "CONNERNEYETAL1986"
+
+    OBJECT                        = REFERENCE
+      DOCUMENT_TOPIC_TYPE           = "MAGNETIC FIELD URANUS"
+      JOURNAL_NAME                  = "JOURNAL OF GEOPHYSICAL RESEARCH"
+      PUBLICATION_DATE              = 1986
+      REFERENCE_DESC                = "
+         Connerney, J. E. P., M. H. Acuna, and N. F. Ness, The        
+         Magnetic Field of Uranus, J. Geophys. Res., 92, 336, 1986."
+
+      OBJECT                        = REFAUTHORS
+        AUTHOR_FULL_NAME              = "J.E.P. CONNERNEY"
+      END_OBJECT                    = REFAUTHORS
+ 
+      OBJECT                        = REFAUTHORS
+        AUTHOR_FULL_NAME              = "M.H. ACUNA"
+      END_OBJECT                    = REFAUTHORS
+ 
+      OBJECT                        = REFAUTHORS
+        AUTHOR_FULL_NAME              = "N.F. NESS"
+      END_OBJECT                    = REFAUTHORS
+    END_OBJECT                    = REFERENCE
+  END_OBJECT                    = INSTREFINFO
+
+  OBJECT                        = INSTREFINFO
+    REFERENCE_KEY_ID              = "DESCH&KAISER1981"
+
+    OBJECT                        = REFERENCE
+      DOCUMENT_TOPIC_TYPE           = "VOYAGER MEASUREMENT ROTATION PERIOD 
+                                       SATURN MAGNETIC FIELD"
+      JOURNAL_NAME                  = "JOURNAL OF GEOPHYSICAL RESEARCH LETTERS"
+      PUBLICATION_DATE              = 1981
+      REFERENCE_DESC                = "
+         Desch, M.D., and M.L. Kaiser, Voyager Measurement of the     
+         Rotation Period of Saturn's Magnetic Field, J. Geophys.      
+         Res. Letters, 8, 253, 1981."
+
+      OBJECT                        = REFAUTHORS
+        AUTHOR_FULL_NAME              = "M.D. DESCH"
+      END_OBJECT                    = REFAUTHORS
+
+      OBJECT                        = REFAUTHORS
+        AUTHOR_FULL_NAME              = "M.L. KAISER"
+      END_OBJECT                    = REFAUTHORS
+    END_OBJECT                    = REFERENCE
+  END_OBJECT                    = INSTREFINFO
+
+  OBJECT                        = INSTREFINFO
+    REFERENCE_KEY_ID              = "DESSLER1983"
+
+    OBJECT                        = REFERENCE
+      DOCUMENT_TOPIC_TYPE           = "PHYSICS OF JOVIAN MAGNETOSPHERE 
+                                       COORDINATE SYSTEMS"
+      JOURNAL_NAME                  = "PHYSICS OF THE JOVIAN MAGNETOSPHERE"
+      PUBLICATION_DATE              = 1983
+      REFERENCE_DESC                = "
+         Dessler, A. J. ed., Physics of the Jovian Magnetosphere,     
+         Cambridge University Press, London, Appendix B - Coordinate  
+         Systems, Dessler, A. J., 1983."
+
+      OBJECT                        = REFAUTHORS
+        AUTHOR_FULL_NAME              = "A.J. DESSLER"
+      END_OBJECT                    = REFAUTHORS
+    END_OBJECT                    = REFERENCE
+  END_OBJECT                    = INSTREFINFO
+
+  OBJECT                        = INSTREFINFO
+    REFERENCE_KEY_ID              = "LEPPINGETAL1981"
+
+    OBJECT                        = REFERENCE
+      DOCUMENT_TOPIC_TYPE           = "MAGNETIC FIELD AND PLASMA FLOW 
+                                       IN JUPITER MAGNETOSHEATH"
+      JOURNAL_NAME                  = "JOURNAL OF GEOPHYSICAL RESEARCH"
+      PUBLICATION_DATE              = 1981
+      REFERENCE_DESC                = "
+         Lepping R. P., et al, Observations of the Magnetic Field and  
+         Plasma Flow in the Jupiter Magnetosheath, J. Geophys. Res.,  
+         86, 8145 1981."
+
+      OBJECT                        = REFAUTHORS
+        AUTHOR_FULL_NAME              = "R.P. LEPPING"
+      END_OBJECT                    = REFAUTHORS
+    END_OBJECT                    = REFERENCE
+  END_OBJECT                    = INSTREFINFO
+
+  OBJECT                        = INSTREFINFO
+    REFERENCE_KEY_ID              = "LEPPINGETAL1986"
+
+    OBJECT                        = REFERENCE
+      DOCUMENT_TOPIC_TYPE           = "SURFACE WAVES URANUS MAGNETOPAUSE"
+      JOURNAL_NAME                  = "JOURNAL OF GEOPHYSICAL RESEARCH"
+      PUBLICATION_DATE              = 1986
+      REFERENCE_DESC                = "
+         Lepping, R. P., L. F. Burlaga, and L. W. Klein, Surface      
+         Waves on Uranus' Magnetopause, J. Geophys, Res., 92, 353,    
+         1986."
+
+      OBJECT                        = REFAUTHORS
+        AUTHOR_FULL_NAME              = "L.F. BURLAGA"
+      END_OBJECT                    = REFAUTHORS
+
+      OBJECT                        = REFAUTHORS
+        AUTHOR_FULL_NAME              = "L.W. KLIEN"
+      END_OBJECT                    = REFAUTHORS
+
+      OBJECT                        = REFAUTHORS
+        AUTHOR_FULL_NAME              = "R.P. LEPPING"
+      END_OBJECT                    = REFAUTHORS
+    END_OBJECT                    = REFERENCE
+  END_OBJECT                    = INSTREFINFO
+
+  OBJECT                        = INSTREFINFO
+    REFERENCE_KEY_ID              = "NESSETAL1979A"
+
+    OBJECT                        = REFERENCE
+      DOCUMENT_TOPIC_TYPE           = "MAGNETIC FIELD STUDIES AT JUPITER 
+                                       BY VOYAGER 2"
+      JOURNAL_NAME                  = "SCIENCE"
+      PUBLICATION_DATE              = 1979
+      REFERENCE_DESC                = "
+         Ness, N. F., et al, Magnetic Field Studies at Jupiter by     
+         Voyager 2: Preliminary Results, Science, 206, 966, 1979."
+
+      OBJECT                        = REFAUTHORS
+        AUTHOR_FULL_NAME              = "N.F. NESS"
+      END_OBJECT                    = REFAUTHORS
+    END_OBJECT                    = REFERENCE
+  END_OBJECT                    = INSTREFINFO
+
+  OBJECT                        = INSTREFINFO
+    REFERENCE_KEY_ID              = "NESSETAL1983"
+
+    OBJECT                        = REFERENCE
+      DOCUMENT_TOPIC_TYPE           = "MAGNETIC FIELD STUDIES VOYAGER 2 
+                                       SATURN PRELIMINARY"
+      JOURNAL_NAME                  = "SCIENCE"
+      PUBLICATION_DATE              = 1983
+      REFERENCE_DESC                = "
+         Ness, N. F., et al, Magnetic Fields at Uranus, Science,      
+         233, 85, 1986."
+
+      OBJECT                        = REFAUTHORS
+        AUTHOR_FULL_NAME              = "N.F. NESS"
+      END_OBJECT                    = REFAUTHORS
+    END_OBJECT                    = REFERENCE
+  END_OBJECT                    = INSTREFINFO
+
+  OBJECT                        = INSTREFINFO
+    REFERENCE_KEY_ID              = "NESSETAL1986"
+
+    OBJECT                        = REFERENCE
+      DOCUMENT_TOPIC_TYPE           = "MAGNETIC FIELD STUDIES URANUS"
+      JOURNAL_NAME                  = "SCIENCE"
+      PUBLICATION_DATE              = 1986
+      REFERENCE_DESC                = "
+         Ness, N. F., et al, Magnetic Fields at Uranus, Science,      
+         233, 85, 1986."
+
+      OBJECT                        = REFAUTHORS
+        AUTHOR_FULL_NAME              = "N.F. NESS"
+      END_OBJECT                    = REFAUTHORS
+    END_OBJECT                    = REFERENCE
+  END_OBJECT                    = INSTREFINFO
+
+  OBJECT                        = INSTREFINFO
+    REFERENCE_KEY_ID              = "VOIGTETAL1986"
+
+    OBJECT                        = REFERENCE
+      DOCUMENT_TOPIC_TYPE           = "MAGNETIC FIELD CURRENT STRUCTURES 
+                                       MAGNETOSPHERE URANUS"
+      JOURNAL_NAME                  = "JOURNAL OF GEOPHYSICAL RESEARCH"
+      PUBLICATION_DATE              = 1986
+      REFERENCE_DESC                = "
+         Voigt, G. H., K. W. Behannon, and N. F. Ness, Magnetic       
+         Field and Current Structures in the Magnetosphere of         
+         Uranus, J. Geophys. Res., 92, 346, 1986."
+
+      OBJECT                        = REFAUTHORS
+        AUTHOR_FULL_NAME              = "G.H. VOIGT"
+      END_OBJECT                    = REFAUTHORS
+
+      OBJECT                        = REFAUTHORS
+        AUTHOR_FULL_NAME              = "K.W. BEHANNON"
+      END_OBJECT                    = REFAUTHORS
+ 
+      OBJECT                        = REFAUTHORS
+        AUTHOR_FULL_NAME              = "N.F. NESS"
+      END_OBJECT                    = REFAUTHORS
+    END_OBJECT                    = REFERENCE
+  END_OBJECT                    = INSTREFINFO
+END_OBJECT                    = SCINSTRUMENT

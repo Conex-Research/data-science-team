@@ -1,0 +1,30 @@
+PDS_VERSION_ID                = PDS3                                          
+PRODUCT_ID                    = "T890823_ASC"                                 
+DATA_SET_ID                   = "VG2-N-MAG-4-RDR-HGCOORDS-1.92SEC-V1.0"       
+PRODUCT_TYPE                  = "DATA"                                        
+STANDARD_DATA_PRODUCT_ID      = "ASCII DATA"                                  
+PRODUCT_CREATION_TIME         = 1993-12-01                                    
+                                                                              
+RECORD_TYPE                   = FIXED_LENGTH                                  
+RECORD_BYTES                  = 144                                           
+FILE_RECORDS                  = 44451                                         
+                                                                              
+START_TIME                    = 1989-08-23T00:00:47.552Z                      
+STOP_TIME                     = 1989-08-23T23:59:59.440Z                      
+SPACECRAFT_CLOCK_START_COUNT  = "11325:23:001"                                
+SPACECRAFT_CLOCK_STOP_COUNT   = "11355:22:001"                                
+                                                                              
+SPACECRAFT_NAME               = "VOYAGER 2"                                   
+INSTRUMENT_NAME               = "TRIAXIAL FLUXGATE MAGNETOMETER"              
+MISSION_PHASE_NAME            = "NEPTUNE ENCOUNTER"                           
+TARGET_NAME                   = "NEPTUNE"                                     
+                                                                              
+^TABLE                        = "T890823_ASC.TAB"                             
+OBJECT                        = TABLE                                         
+  INTERCHANGE_FORMAT            = ASCII                                       
+  ROWS                          = 44451                                       
+  COLUMNS                       = 17                                          
+  ROW_BYTES                     = 144                                         
+  ^STRUCTURE                    = "ASCDATA.FMT"                               
+END_OBJECT                    = TABLE                                         
+END                                                                           
