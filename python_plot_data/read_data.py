@@ -9,6 +9,10 @@ from datetime import datetime
 import pandas as pd
 import numpy as np
 
+from pathlib import Path
+
+import os
+
 mag_time = "1989-08-30T00:00:00.691Z"
 
 
@@ -16,9 +20,15 @@ date_time = datetime.strptime(mag_time, "%Y-%m-%dT%H:%M:%S.%fZ")
 print("date and time:",date_time)
 
 
+ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
+
+p = os.path.abspath('..')
+print(p)
+print(os.path.join(p, "\data\VG2_N_MAG\DATA\ASCDATA.FMT")) 
+
 # Get the column names
 column_names = []
-f = open("C://Users\Prinzessin\Downloads\VG2-N-MAG-4-RDR-HGCOORDS-1.92SEC-V1.0\DATA\ASCDATA.FMT", "r")
+f = open("C://", "r")
 for x in f:
     if "NAME" in x:
         s = x.split('"')
