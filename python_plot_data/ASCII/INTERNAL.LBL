@@ -1,0 +1,117 @@
+PDS_VERSION_ID               = PDS3                                           
+PRODUCT_ID                   = "INTERNAL"                                     
+DATA_SET_ID                  = "VG2-N-MAG-4-SUMM-NLSCOORDS-12SEC-V1.0"        
+PRODUCT_TYPE                 = "DATA"                                         
+STANDARD_DATA_PRODUCT_ID     = "ASCII DATA"                                   
+PRODUCT_CREATION_TIME        = 2002-08-19T10:15:11                            
+                                                                              
+RECORD_TYPE                  = FIXED_LENGTH                                   
+RECORD_BYTES                 = 69                                             
+FILE_RECORDS                 = 2194                                           
+                                                                              
+START_TIME                   = "N/A"                                          
+STOP_TIME                    = "N/A"                                          
+SPACECRAFT_CLOCK_START_COUNT = "N/A"                                          
+SPACECRAFT_CLOCK_STOP_COUNT  = "N/A"                                          
+                                                                              
+SPACECRAFT_NAME              = "VOYAGER 2"                                    
+INSTRUMENT_NAME              = "TRIAXIAL FLUXGATE MAGNETOMETER"               
+MISSION_PHASE_NAME           = "NEPTUNE ENCOUNTER"                            
+TARGET_NAME                  = "NEPTUNE"                                      
+                                                                              
+DESCRIPTION                  = "                                              
+     This file contains the magnetic field values obtained at Neptune         
+     that were used in obtaining Connerney's spherical harmonic model of      
+     Neptune's internal field. The data are organized by spacecraft           
+     position and include the estimate of the error used when                 
+     generating  coefficients.  This dataset is sampled as a function         
+     of spacecraft position in NLS coordinates where range values are given   
+     in units of Rn where Rn equals 24765 km."                                
+                                                                              
+^TABLE                       = "INTERNAL.TAB"                                 
+OBJECT                       = TABLE                                          
+  INTERCHANGE_FORMAT         = ASCII                                          
+  ROWS                       = 2194                                           
+  COLUMNS                    = 6                                              
+  ROW_BYTES                  = 69                                             
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "Range"                                        
+    COLUMN_NUMBER            = 1                                              
+    UNIT                     = "PLANETARY RADII"                              
+    DATA_TYPE                = ASCII_REAL                                     
+    FORMAT                   = "1X, F12.3"                                    
+    START_BYTE               = 2                                              
+    BYTES                    = 12                                             
+    DESCRIPTION              = "                                              
+      Spacecraft position vector radial component in units of                 
+      Neptune radii where 1 Rn = 24,765km."                                   
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "Theta"                                        
+    COLUMN_NUMBER            = 2                                              
+    UNIT                     = "RADIANS"                                      
+    DATA_TYPE                = ASCII_REAL                                     
+    FORMAT                   = "F12.3"                                        
+    START_BYTE               = 14                                             
+    BYTES                    = 12                                             
+    DESCRIPTION              = "                                              
+      Theta component of spacecraft in radians."                              
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "Phi"                                          
+    COLUMN_NUMBER            = 3                                              
+    UNIT                     = "RADIANS"                                      
+    DATA_TYPE                = ASCII_REAL                                     
+    FORMAT                   = "F12.3"                                        
+    START_BYTE               = 26                                             
+    BYTES                    = 12                                             
+    DESCRIPTION              = "                                              
+      Phi component of spacecraft in radians."                                
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "B_component"                                  
+    COLUMN_NUMBER            = 4                                              
+    UNIT                     = "NANOTESLA"                                    
+    DATA_TYPE                = ASCII_REAL                                     
+    FORMAT                   = "F12.3"                                        
+    START_BYTE               = 38                                             
+    BYTES                    = 12                                             
+    DESCRIPTION              = "                                              
+      Value of the component of the magnetic field according                  
+      to the type column."                                                    
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "SIGMA"                                        
+    COLUMN_NUMBER            = 5                                              
+    UNIT                     = "NANOTESLA"                                    
+    DATA_TYPE                = ASCII_REAL                                     
+    FORMAT                   = "F12.3"                                        
+    START_BYTE               = 50                                             
+    BYTES                    = 12                                             
+    DESCRIPTION              = "                                              
+      Estimated standard deviation of the observation in units on nT."        
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+  OBJECT                     = COLUMN                                         
+    NAME                     = "TYPE"                                         
+    COLUMN_NUMBER            = 6                                              
+    UNIT                     = "NONE"                                         
+    DATA_TYPE                = ASCII_INTEGER                                  
+    FORMAT                   = I6                                             
+    START_BYTE               = 62                                             
+    BYTES                    = 6                                              
+    DESCRIPTION              = "                                              
+       Magnetic field component type:                                         
+         1 = Radial component                                                 
+         2 = Theta component                                                  
+         3 = Phi component                                                    
+         4 = Magnitude of the magnetic field."                                
+  END_OBJECT                 = COLUMN                                         
+                                                                              
+END_OBJECT                   = TABLE                                          
+END                                                                           
